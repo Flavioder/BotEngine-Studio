@@ -1,0 +1,77 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+/* ROOT FIX (shumë i rëndësishëm) */
+#root {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* BODY BACKGROUND (premium SaaS style) */
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #ffffff;
+  line-height: 1.6;
+
+  background: radial-gradient(
+      circle at 12% 28%,
+      rgba(0, 212, 255, 0.16) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(123, 63, 228, 0.14) 0%,
+      transparent 28%
+    ),
+    linear-gradient(135deg, #020617 0%, #030818 52%, #05051a 100%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* CONTAINER GLOBAL */
+.container {
+  width: min(1200px, 100% - 32px);
+  margin: 0 auto;
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 0;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* BUTTON RESET */
+button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
