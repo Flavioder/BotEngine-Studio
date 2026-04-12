@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import ScrollToHash from "./components/layout/ScrollToHash";
 import ScrollToTop from "./components/layout/ScrollToTop";
 import Navbar from "./components/layout/Navbar";
-import Home from "./components/Pages/Home";
+import Home from "./components/pages/Home";
 import Footer from "./components/layout/Footer";
 import AboutPage from "./components/pages/AboutPage";
 import ContactPage from "./components/pages/ContactPage";
