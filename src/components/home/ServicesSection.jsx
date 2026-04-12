@@ -1,6 +1,6 @@
 import "../styles/ServicesSection.css";
 import { Bot, LayoutDashboard, Sparkles } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const services = [
   {
     id: 1,
@@ -13,6 +13,7 @@ const services = [
       "Analitikë të detajuara",
     ],
     type: "cyan",
+    link: "/chatbot-service", // 🔥
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const services = [
     text: "Website modern, i shpejtë dhe i optimizuar për konvertim që përfaqëson biznesin tuaj profesionalisht.",
     features: ["Responsive design", "SEO optimizim", "Shpejtësi e lartë"],
     type: "purple",
+    link: "/website-service", // 🔥 (do e krijosh më vonë)
   },
   {
     id: 3,
@@ -34,11 +36,12 @@ const services = [
     ],
     type: "blue",
     popular: true,
+    link: "/contact", // ose page tjetër
   },
 ];
 function ServicesSection() {
   return (
-    <section className="services-section">
+    <section className="services-section" id="services">
       <div className="services-container">
         <div className="services-heading">
           <span className="services-label">SHËRBIMET</span>
@@ -67,6 +70,11 @@ function ServicesSection() {
                   </li>
                 ))}
               </ul>
+
+              {/* 🔥 BUTTON */}
+              <Link to={item.link} className={`service-btn ${item.type}`}>
+                Shiko më shumë →
+              </Link>
             </div>
           ))}
         </div>

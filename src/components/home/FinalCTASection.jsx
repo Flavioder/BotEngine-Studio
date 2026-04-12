@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/FinalCTASection.css";
 import { MessageCircleMore, Phone } from "lucide-react";
 
@@ -16,18 +17,18 @@ function FinalCTASection() {
           </p>
 
           <div className="final-cta-actions">
-            <a href="#contact" className="final-cta-btn final-cta-btn-primary">
+            <Link to="/contact" className="final-cta-btn final-cta-btn-primary">
               <MessageCircleMore size={20} strokeWidth={2.2} />
               <span>Merr Demo</span>
-            </a>
+            </Link>
 
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="final-cta-btn final-cta-btn-secondary"
             >
               <Phone size={20} strokeWidth={2.2} />
               <span>Kontakto</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

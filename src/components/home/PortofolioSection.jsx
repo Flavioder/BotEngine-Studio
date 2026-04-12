@@ -33,7 +33,7 @@ const portfolioItems = [
 
 function PortofolioSection() {
   return (
-    <section className="portfolio-section">
+    <section className="portfolio-section" id="portfolio">
       <div className="portfolio-container">
         <div className="portfolio-heading">
           <span className="portfolio-label">PORTFOLIO</span>

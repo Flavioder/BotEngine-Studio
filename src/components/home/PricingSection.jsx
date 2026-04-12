@@ -55,7 +55,7 @@ const plans = [
 
 function PricingSection() {
   return (
-    <section className="pricing-section">
+    <section className="pricing-section" id="pricing">
       <div className="pricing-container">
         <div className="pricing-heading">
           <span className="pricing-label">ÇMIMET</span>

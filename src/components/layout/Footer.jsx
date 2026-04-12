@@ -1,6 +1,7 @@
 import "../styles/Footer.css";
 import { Mail, Phone, Bot } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer">
@@ -33,7 +34,7 @@ function Footer() {
           <div className="footer-links">
             <h4>Kompania</h4>
             <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Kontakt</a>
+            <Link to="/contact">Kontakt</Link>
           </div>
 
           <div className="footer-contact">

@@ -1,6 +1,6 @@
 .services-section {
   width: 100%;
-  padding: 120px 0 100px;
+  padding: 10px 0 100px;
 
   /* SCALE FIX 🔥 */
   transform: scale(0.92);
@@ -184,6 +184,39 @@
 .feature.blue .check {
   color: #00e0ff;
   filter: drop-shadow(0 0 6px rgba(0, 224, 255, 0.5));
+}
+.service-btn {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  color: rgba(200, 210, 220, 0.7);
+
+  transition: all 0.25s ease;
+}
+
+/* hover general */
+.service-btn:hover {
+  transform: translateX(4px);
+  color: #ffffff;
+}
+
+/* color variants */
+.service-btn.cyan:hover {
+  color: #00d4ff;
+}
+
+.service-btn.purple:hover {
+  color: #7b3fff;
+}
+
+.service-btn.blue:hover {
+  color: #4f7cff;
 }
 @media (max-width: 1400px) {
   .services-container {
