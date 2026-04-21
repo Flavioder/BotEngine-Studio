@@ -246,6 +246,18 @@
   box-shadow: 0 18px 40px rgba(90, 120, 255, 0.4),
     0 0 30px rgba(120, 80, 255, 0.25);
 }
+/*Animation*/
+.fade-up1 {
+  opacity: 0;
+  transform: translateY(90px);
+  transition: all 1s ease;
+}
+
+.fade-up1.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
 
 /* responsive */
 @media (max-width: 1400px) {

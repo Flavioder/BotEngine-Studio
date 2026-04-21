@@ -1,5 +1,6 @@
 import "../styles/WhySection.css";
 import { Zap, Cpu, Palette, Target } from "lucide-react";
+import { useEffect } from "react";
 
 const features = [
   {
@@ -8,6 +9,7 @@ const features = [
     title: "Shpejtësi",
     text: "Dorëzim brenda 48 orëve. Biznesi juaj nuk pret.",
     variant: "cyan",
+    delay:"0.2s",
   },
   {
     id: 2,
@@ -15,6 +17,8 @@ const features = [
     title: "Automatizim",
     text: "AI që punon 24/7 pa pushim dhe pa gabime.",
     variant: "purple",
+    delay:"0.3s",
+
   },
   {
     id: 3,
@@ -22,6 +26,8 @@ const features = [
     title: "Dizajn Premium",
     text: "Dizajne unike që ndërtojnë besim dhe profesionalizëm.",
     variant: "cyan",
+    delay:"0.4s",
+
   },
   {
     id: 4,
@@ -29,10 +35,25 @@ const features = [
     title: "Konvertim",
     text: "Çdo element është optimizuar për të kthyer vizitorët në klientë.",
     variant: "purple",
+    delay:"0.5s",
+
   },
 ];
 
 function WhySection() {
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-up1");
+            
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          }
+        });
+      });
+            
+      elements.forEach((el) => observer.observe(el));
+  }, []);
   return (
     <section className="why-section">
       <div className="why-container">
@@ -45,7 +66,7 @@ function WhySection() {
 
         <div className="why-grid">
           {features.map((item) => (
-            <article key={item.id} className="why-card">
+            <article key={item.id} className="why-card fade-up1" style={{transitionDelay:`${item.delay}`}}>
               <div className={`why-icon ${item.variant}`}>{item.icon}</div>
 
               <h3 className="why-card-title">{item.title}</h3>

@@ -111,6 +111,18 @@
   font-size: 14.5px;
   line-height: 1.6;
 }
+/*Animation*/
+.fade-up1 {
+  opacity: 0;
+  transform: translateY(90px);
+  transition: all 1s ease;
+}
+
+.fade-up1.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* responsive */
 @media (max-width: 1100px) {

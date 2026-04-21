@@ -1,5 +1,6 @@
 import "../styles/PortofolioSection.css";
 import { Building2, ShoppingBag, Stethoscope } from "lucide-react";
+import { useEffect } from "react";
 
 const portfolioItems = [
   {
@@ -32,6 +33,19 @@ const portfolioItems = [
 ];
 
 function PortofolioSection() {
+   useEffect(() => {
+            const elements = document.querySelectorAll(".fade-up1");
+        
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("show");
+                }
+              });
+            });
+        
+            elements.forEach((el) => observer.observe(el));
+          }, []);
   return (
     <section className="portfolio-section" id="portfolio">
       <div className="portfolio-container">
@@ -42,7 +56,7 @@ function PortofolioSection() {
           </h2>
         </div>
 
-        <div className="portfolio-grid">
+        <div className="portfolio-grid fade-up1">
           {portfolioItems.map((item) => (
             <article key={item.id} className={`portfolio-card ${item.variant}`}>
               <div className="portfolio-image">

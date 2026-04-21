@@ -217,6 +217,19 @@
   opacity: 1;
   transform: translateY(0);
 }
+/*Animation*/
+.fade-up1 {
+  opacity: 0;
+  transform: translateY(90px);
+  transition: all 1s ease;
+}
+
+.fade-up1.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
 
 /* responsive */
 @media (max-width: 1400px) {

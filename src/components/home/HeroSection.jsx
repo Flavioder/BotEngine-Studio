@@ -1,10 +1,25 @@
 import "../styles/Hero.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 function HeroSection() {
+   useEffect(() => {
+    const elements = document.querySelectorAll(".fade-up1");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  }, []);
   return (
     <section className="hero-section" id="home">
       <div className="hero-inner">
-        <div className="hero-left">
+        <div className="hero-left fade-up1">
           <div className="hero-badge">
             <span className="hero-badge-dot"></span>
             AI-Powered Solutions

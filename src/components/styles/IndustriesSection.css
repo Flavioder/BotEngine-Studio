@@ -92,6 +92,20 @@
   letter-spacing: -0.02em;
   text-align: center;
 }
+/*Animation*/
+.fade-up1 {
+  opacity: 0;
+  transform: translateY(90px);
+  transition: all 1s ease;
+}
+
+.fade-up1.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+
 
 @media (max-width: 1400px) {
   .industries-container {

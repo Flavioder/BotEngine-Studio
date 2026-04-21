@@ -2,6 +2,19 @@ import "../styles/AboutPage.css";
 import { Target, Eye, Zap, Cpu, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
 function AboutPage() {
+   useEffect(() => {
+    const elements = document.querySelectorAll(".fade-up1");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  }, []);
   return (
     <main className="about-page">
       {/* HERO */}

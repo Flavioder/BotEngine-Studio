@@ -1,5 +1,6 @@
 import "../styles/PricingSection.css";
 import { Check, Star } from "lucide-react";
+import { useEffect } from "react";
 
 const plans = [
   {
@@ -16,6 +17,7 @@ const plans = [
     ],
     buttonText: "Fillo Tani",
     featured: false,
+    delay:"0.5s",
   },
   {
     id: 2,
@@ -32,6 +34,7 @@ const plans = [
     ],
     buttonText: "Fillo Tani",
     featured: false,
+    delay:"0.3s",
   },
   {
     id: 3,
@@ -50,10 +53,24 @@ const plans = [
     buttonText: "Merr Premium",
     featured: true,
     badge: "Rekomanduar",
+    delay:"0s",
   },
 ];
 
 function PricingSection() {
+   useEffect(() => {
+            const elements = document.querySelectorAll(".fade-up1");
+        
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("show");
+                }
+              });
+            });
+        
+            elements.forEach((el) => observer.observe(el));
+          }, []);
   return (
     <section className="pricing-section" id="pricing">
       <div className="pricing-container">
@@ -69,9 +86,7 @@ function PricingSection() {
             <article
               key={plan.id}
               className={`pricing-card ${
-                plan.featured ? "pricing-card-featured" : ""
-              }`}
-            >
+                plan.featured ? "pricing-card-featured" : ""} fade-up1`} style={{transitionDelay:`${plan.delay}`}}>
               {plan.featured && (
                 <div className="pricing-badge">
                   <Star size={12} fill="currentColor" />

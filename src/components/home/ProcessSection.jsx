@@ -1,5 +1,6 @@
 import "../styles/ProcessSection.css";
 import { MessageCircle, Box, Code2, Rocket } from "lucide-react";
+import { useEffect } from "react";
 
 const steps = [
   {
@@ -33,9 +34,22 @@ const steps = [
 ];
 
 function ProcessSection() {
+    useEffect(() => {
+          const elements = document.querySelectorAll(".fade-up1");
+      
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              }
+            });
+          });
+      
+          elements.forEach((el) => observer.observe(el));
+        }, []);
   return (
-    <section className="process-section">
-      <div className="process-container">
+    <section className="process-section ">
+      <div className="process-container ">
         <div className="process-heading">
           <span className="process-label">PROCESI</span>
           <h2 className="process-title">
@@ -43,7 +57,7 @@ function ProcessSection() {
           </h2>
         </div>
 
-        <div className="process-timeline">
+        <div className="process-timeline fade-up1">
           <div className="process-line"></div>
 
           {steps.map((step) => (
