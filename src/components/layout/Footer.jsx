@@ -26,14 +26,14 @@ function Footer() {
 
           <div className="footer-links">
             <h4>Shërbimet</h4>
-            <a href="#services">AI Chatbot</a>
-            <a href="#services">Web Development</a>
-            <a href="#services">Premium Combo</a>
+            <Link to="/chatbot-service">AI Chatbot</Link>
+            <Link to="/website-service">Web Development</Link>
+            <Link to="/combo-service">Premium Combo</Link>
           </div>
 
           <div className="footer-links">
             <h4>Kompania</h4>
-            <a href="#portfolio">Portfolio</a>
+            <a href="/#portfolio">Portfolio</a>
             <Link to="/contact">Kontakt</Link>
           </div>
 
@@ -48,22 +48,17 @@ function Footer() {
               <span>info@botenginestudio.com</span>
             </a>
 
-            <a href="tel:+38344000000" className="footer-contact-item">
+            <a href="tel:+355694471238" className="footer-contact-item">
               <Phone size={17} />
-              <span>+383 44 000 000</span>
+              <span>+355 69 447 1238</span>
             </a>
-
-            <div className="footer-social">
-              <a href="#" aria-label="Instagram">
-                <FaInstagram />
-              </a>
-              <a href="#" aria-label="Facebook">
-                <FaFacebookF />
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <FaLinkedinIn />
-              </a>
-            </div>
+            <a
+              href="https://www.instagram.com/botenginestudio?igsh=MTZuYXU4aHZ1aWlnZw=="
+              className="footer-contact-item"
+            >
+              <FaInstagram size={17} />
+              <span>@BotEngineStudio</span>
+            </a>
           </div>
         </div>
 

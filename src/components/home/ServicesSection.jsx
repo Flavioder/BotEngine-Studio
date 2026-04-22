@@ -16,7 +16,7 @@ const services = [
     ],
     type: "cyan",
     link: "/chatbot-service", // 🔥
-    delay:"0.1s",
+    delay: "0.1s",
   },
   {
     id: 2,
@@ -26,8 +26,7 @@ const services = [
     features: ["Responsive design", "SEO optimizim", "Shpejtësi e lartë"],
     type: "purple",
     link: "/website-service", // 🔥 (do e krijosh më vonë)
-    delay:"0.2s",
-
+    delay: "0.2s",
   },
   {
     id: 3,
@@ -41,25 +40,24 @@ const services = [
     ],
     type: "blue",
     popular: true,
-    link: "/contact", // ose page tjetër
-    delay:"0.3s",
-
+    link: "/combo-service", // ose page tjetër
+    delay: "0.3s",
   },
 ];
 function ServicesSection() {
-       useEffect(() => {
-        const elements = document.querySelectorAll(".fade-up1");
-    
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-            }
-          });
-        });
-    
-        elements.forEach((el) => observer.observe(el));
-      }, []);
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-up1");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  }, []);
   return (
     <section className="services-section" id="services">
       <div className="services-container">
@@ -70,9 +68,13 @@ function ServicesSection() {
           </h2>
         </div>
 
-        <div className="services-grid " >
+        <div className="services-grid ">
           {services.map((item) => (
-            <div className="service-card fade-up1" key={item.id} style={{transitionDelay:`${item.delay}`}}>
+            <div
+              className="service-card fade-up1"
+              key={item.id}
+              style={{ transitionDelay: `${item.delay}` }}
+            >
               {item.popular && <div className="badge">Popular</div>}
 
               <div className={`icon-box ${item.type}`}>

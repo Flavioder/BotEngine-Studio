@@ -10,6 +10,7 @@ import AboutPage from "./components/pages/AboutPage";
 import ContactPage from "./components/pages/ContactPage";
 import ChatbotServicePage from "./components/pages/ChatbotServicePage";
 import WebsiteServicePage from "./components/pages/WebsiteServicePage";
+import ComboServicePage from "./components/pages/ComboServicePage";
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/chatbot-service" element={<ChatbotServicePage />} />
         <Route path="/website-service" element={<WebsiteServicePage />} />
+        <Route path="/combo-service" element={<ComboServicePage />} />
       </Routes>
       <Footer />
     </>

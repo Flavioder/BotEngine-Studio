@@ -104,7 +104,7 @@ function ContactPage() {
                 </div>
                 <div>
                   <h3>Telefon</h3>
-                  <p>+355 69 000 0000</p>
+                  <p>+355 69 447 1238</p>
                 </div>
               </div>
 
@@ -126,14 +126,11 @@ function ContactPage() {
                 </p>
 
                 <div className="contact-social">
-                  <a href="#" aria-label="Instagram">
+                  <a
+                    href="https://www.instagram.com/botenginestudio?igsh=MTZuYXU4aHZ1aWlnZw=="
+                    aria-label="Instagram"
+                  >
                     <FaInstagram />
-                  </a>
-                  <a href="#" aria-label="Facebook">
-                    <FaFacebookF />
-                  </a>
-                  <a href="#" aria-label="LinkedIn">
-                    <FaLinkedinIn />
                   </a>
                 </div>
               </div>

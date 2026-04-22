@@ -15,7 +15,6 @@ function Navbar() {
     <header className="navbar">
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
-          <span className="logo-dot"></span>
           BotEngine<span>Studio</span>
         </Link>
 

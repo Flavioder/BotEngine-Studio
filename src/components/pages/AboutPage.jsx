@@ -1,8 +1,9 @@
 import "../styles/AboutPage.css";
 import { Target, Eye, Zap, Cpu, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 function AboutPage() {
-   useEffect(() => {
+  useEffect(() => {
     const elements = document.querySelectorAll(".fade-up1");
 
     const observer = new IntersectionObserver((entries) => {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 function HeroSection() {
-   useEffect(() => {
+  useEffect(() => {
     const elements = document.querySelectorAll(".fade-up1");
 
     const observer = new IntersectionObserver((entries) => {
@@ -20,11 +20,6 @@ function HeroSection() {
     <section className="hero-section" id="home">
       <div className="hero-inner">
         <div className="hero-left fade-up1">
-          <div className="hero-badge">
-            <span className="hero-badge-dot"></span>
-            AI-Powered Solutions
-          </div>
-
           <h1 className="hero-title">
             Automatizo biznesin
             <br />
