@@ -1,5 +1,6 @@
 import "../styles/WebsiteServicePricingSection.css";
 import { Check, Star } from "lucide-react";
+import { useEffect } from "react";
 
 const websitePlans = [
   {
@@ -22,6 +23,7 @@ const websitePlans = [
     ],
     buttonText: "Kërko Ofertë",
     featured: false,
+    delay:"0.3s",
   },
   {
     id: 2,
@@ -45,6 +47,8 @@ const websitePlans = [
     buttonText: "Më i zgjedhuri",
     featured: true,
     badge: "Më i zgjedhuri",
+    delay:"0.4s",
+
   },
   {
     id: 3,
@@ -74,10 +78,25 @@ const websitePlans = [
     ],
     buttonText: "Kërko Premium",
     featured: false,
+    delay:"0.5s",
+
   },
 ];
 
 function WebsiteServicePricingSection() {
+    useEffect(() => {
+              const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
+          
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                  }
+                });
+              });
+          
+              elements.forEach((el) => observer.observe(el));
+            }, []);
   return (
     <section className="website-service-pricing">
       <div className="website-service-container">
@@ -89,10 +108,9 @@ function WebsiteServicePricingSection() {
           {websitePlans.map((plan) => (
             <article
               key={plan.id}
-              className={`website-service-pricing-card ${
+              className={`website-service-pricing-card grow ${
                 plan.featured ? "website-service-pricing-card-featured" : ""
-              }`}
-            >
+              } `}>
               {plan.featured && (
                 <div className="website-service-pricing-badge">
                   <Star size={12} fill="currentColor" />

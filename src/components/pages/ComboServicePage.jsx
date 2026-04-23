@@ -1,7 +1,23 @@
 import "../styles/ComboServicePage.css";
 import { Bot, Globe, TrendingUp, ArrowRight } from "lucide-react";
+import { useEffect } from "react";
 
 function ComboServicePage() {
+
+  useEffect(() => {
+              const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
+          
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                  }
+                });
+              });
+          
+              elements.forEach((el) => observer.observe(el));
+            }, []);
+
   return (
     <section className="combo-page">
       <div className="combo-container">
@@ -41,20 +57,20 @@ function ComboServicePage() {
         <div className="combo-solution">
           <h2>Zgjidhja jonë 🔥</h2>
 
-          <div className="solution-grid">
-            <div className="solution-card">
+          <div className="solution-grid fade-up1">
+            <div className="solution-card" style={{transitionDelay:`0.2s`}}>
               <Globe />
               <h3>Website Premium</h3>
               <p>Design modern i fokusuar në shitje</p>
             </div>
 
-            <div className="solution-card">
+            <div className="solution-card" style={{transitionDelay:`0.3s`}}>
               <Bot />
               <h3>AI Chatbot</h3>
               <p>Automatizon komunikimin 24/7</p>
             </div>
 
-            <div className="solution-card">
+            <div className="solution-card" style={{transitionDelay:`0.4s`}}>
               <TrendingUp />
               <h3>Rritje Konvertimesh</h3>
               <p>System që kthen vizitorët në klientë</p>
@@ -66,8 +82,8 @@ function ComboServicePage() {
         <div className="combo-features">
           <h2>Çfarë përfshin paketa</h2>
 
-          <div className="features-grid">
-            <div>
+          <div className="features-grid fade-up1">
+            <div style={{transitionDelay:"0.2s"}}>
               <h4>Website</h4>
               <ul>
                 <li>Landing page / multi-page</li>
@@ -77,7 +93,7 @@ function ComboServicePage() {
               </ul>
             </div>
 
-            <div>
+            <div style={{transitionDelay:"0.2s"}}>
               <h4>Chatbot</h4>
               <ul>
                 <li>FAQ + Lead capture</li>
@@ -90,14 +106,14 @@ function ComboServicePage() {
         </div>
 
         {/* PROCESS */}
-        <div className="combo-process">
+        <div className="combo-process ">
           <h2>Si funksionon?</h2>
 
-          <div className="process-steps">
-            <div>1. Konsultim</div>
-            <div>2. Strategji</div>
-            <div>3. Zhvillim</div>
-            <div>4. Launch 🚀</div>
+          <div className="process-steps fade-up1">
+            <div style={{transitionDelay:"0.2s"}}>1. Konsultim</div>
+            <div style={{transitionDelay:"0.3s"}}>2. Strategji</div>
+            <div style={{transitionDelay:"0.4s"}}>3. Zhvillim</div>
+            <div style={{transitionDelay:"0.5s"}}>4. Launch 🚀</div>
           </div>
         </div>
 

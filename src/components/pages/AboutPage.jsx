@@ -3,19 +3,19 @@ import { Target, Eye, Zap, Cpu, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 function AboutPage() {
-  useEffect(() => {
-    const elements = document.querySelectorAll(".fade-up1");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    });
-
-    elements.forEach((el) => observer.observe(el));
-  }, []);
+ useEffect(() => {
+              const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
+          
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                  }
+                });
+              });
+          
+              elements.forEach((el) => observer.observe(el));
+            }, []);
   return (
     <main className="about-page">
       {/* HERO */}
@@ -37,7 +37,7 @@ function AboutPage() {
       {/* MISSION & VISION */}
       <section className="about-mission">
         <div className="about-container about-grid-2">
-          <div className="about-card">
+          <div className="about-card grow">
             <div className="about-icon cyan">
               <Target size={26} />
             </div>
@@ -48,7 +48,7 @@ function AboutPage() {
             </p>
           </div>
 
-          <div className="about-card">
+          <div className="about-card grow">
             <div className="about-icon purple">
               <Eye size={26} />
             </div>
@@ -63,18 +63,18 @@ function AboutPage() {
 
       {/* STORY */}
       <section className="about-story">
-        <div className="about-container">
-          <h2 className="about-section-title">
+        <div className="about-container ">
+          <h2 className="about-section-title" >
             Pse ekziston <span>BotEngineStudio?</span>
           </h2>
 
-          <p className="about-text">
+          <p className="about-text" >
             Shumë biznese humbasin klientë çdo ditë për një arsye të thjeshtë:
             përgjigjen vonë, nuk kanë prezencë profesionale online dhe nuk
             përdorin automatizim.
           </p>
 
-          <p className="about-text">
+          <p className="about-text" >
             Ne e ndërtuam BotEngineStudio për të zgjidhur këtë problem.
             Kombinojmë teknologjinë AI me dizajn modern për të krijuar sisteme
             që punojnë për ju 24/7.
@@ -89,8 +89,8 @@ function AboutPage() {
             Çfarë na <span>dallon?</span>
           </h2>
 
-          <div className="about-grid-3">
-            <div className="about-card">
+          <div className="about-grid-3 fade-up1">
+            <div className="about-card" style={{transitionDelay:"0.2s"}}>
               <div className="about-icon cyan">
                 <Zap size={24} />
               </div>
@@ -99,14 +99,14 @@ function AboutPage() {
             </div>
 
             <div className="about-card">
-              <div className="about-icon purple">
+              <div className="about-icon purple" style={{transitionDelay:"0.4s"}}>
                 <Cpu size={24} />
               </div>
               <h4>Automatizim</h4>
               <p>Sisteme që punojnë pa ndërhyrje.</p>
             </div>
 
-            <div className="about-card">
+            <div className="about-card" style={{transitionDelay:"0.6s"}}>
               <div className="about-icon cyan">
                 <Palette size={24} />
               </div>

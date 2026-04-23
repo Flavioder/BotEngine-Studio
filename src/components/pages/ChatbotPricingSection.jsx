@@ -1,6 +1,6 @@
 import "../styles/ChatbotPricingSection.css";
 import { Check, Star } from "lucide-react";
-
+import { useEffect } from "react";
 const chatbotPlans = [
   {
     id: 1,
@@ -17,6 +17,7 @@ const chatbotPlans = [
     buttonText: "Kërko Ofertë",
     featured: false,
     type: "basic",
+    delay:"0.2s",
   },
   {
     id: 2,
@@ -36,6 +37,7 @@ const chatbotPlans = [
     featured: true,
     badge: "Më i zgjedhuri",
     type: "growth",
+    delay:"0.3s",
   },
   {
     id: 3,
@@ -54,10 +56,25 @@ const chatbotPlans = [
     buttonText: "Kërko Premium",
     featured: false,
     type: "pro",
+    delay:"0.4s",
+
   },
 ];
 
 function ChatbotPricingSection() {
+      useEffect(() => {
+            const elements = document.querySelectorAll(".grow");
+        
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("show");
+                }
+              });
+            });
+        
+            elements.forEach((el) => observer.observe(el));
+          }, []);
   return (
     <section className="chatbot-pricing-section">
       <div className="chatbot-container">
@@ -71,8 +88,7 @@ function ChatbotPricingSection() {
               key={plan.id}
               className={`chatbot-pricing-card ${
                 plan.featured ? "chatbot-pricing-card-featured" : ""
-              }`}
-            >
+              } grow`} style={{transitionDelay:`${plan.delay}`}}>
               {plan.featured && (
                 <div className="chatbot-pricing-badge">
                   <Star size={12} fill="currentColor" />
