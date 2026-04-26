@@ -1,8 +1,22 @@
 import "../styles/ContactPage.css";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { useEffect } from "react";
 
 function ContactPage() {
+   useEffect(() => {
+                const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
+            
+                const observer = new IntersectionObserver((entries) => {
+                  entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                      entry.target.classList.add("show");
+                    }
+                  });
+                });
+            
+                elements.forEach((el) => observer.observe(el));
+              }, []);
   return (
     <main className="contact-page">
       <section className="contact-hero">
@@ -24,7 +38,7 @@ function ContactPage() {
         <div className="contact-container">
           <div className="contact-grid">
             {/* LEFT */}
-            <div className="contact-form-card">
+            <div className="contact-form-card fade-in">
               <div className="contact-card-top">
                 <h2>Na dërgo një mesazh</h2>
                 <p>
@@ -37,7 +51,7 @@ function ContactPage() {
                 <div className="contact-form-row">
                   <div className="contact-field">
                     <label>Emri</label>
-                    <input type="text" placeholder="Shkruani emrin tuaj" />
+                    <input type="text" placeholder="Shkruani emrin tuaj"/>
                   </div>
 
                   <div className="contact-field">
@@ -88,7 +102,7 @@ function ContactPage() {
 
             {/* RIGHT */}
             <div className="contact-info-column">
-              <div className="contact-info-card">
+              <div className="contact-info-card fade-up1">
                 <div className="contact-info-icon cyan">
                   <Mail size={20} />
                 </div>
@@ -98,7 +112,7 @@ function ContactPage() {
                 </div>
               </div>
 
-              <div className="contact-info-card">
+              <div className="contact-info-card fade-up1">
                 <div className="contact-info-icon purple">
                   <Phone size={20} />
                 </div>
@@ -108,7 +122,7 @@ function ContactPage() {
                 </div>
               </div>
 
-              <div className="contact-info-card">
+              <div className="contact-info-card fade-up1">
                 <div className="contact-info-icon cyan">
                   <MapPin size={20} />
                 </div>
@@ -118,7 +132,7 @@ function ContactPage() {
                 </div>
               </div>
 
-              <div className="contact-social-card">
+              <div className="contact-social-card fade-up1">
                 <h3>Na ndiqni</h3>
                 <p>
                   Qëndroni të lidhur me ne dhe shikoni projektet dhe risitë
