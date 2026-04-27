@@ -1,5 +1,6 @@
 import "../styles/ChatbotPricingSection.css";
 import { Check, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 const chatbotPlans = [
   {
@@ -17,7 +18,7 @@ const chatbotPlans = [
     buttonText: "Kërko Ofertë",
     featured: false,
     type: "basic",
-    delay:"0.2s",
+    delay: "0.2s",
   },
   {
     id: 2,
@@ -37,7 +38,7 @@ const chatbotPlans = [
     featured: true,
     badge: "Më i zgjedhuri",
     type: "growth",
-    delay:"0.3s",
+    delay: "0.3s",
   },
   {
     id: 3,
@@ -56,25 +57,24 @@ const chatbotPlans = [
     buttonText: "Kërko Premium",
     featured: false,
     type: "pro",
-    delay:"0.4s",
-
+    delay: "0.4s",
   },
 ];
 
 function ChatbotPricingSection() {
-      useEffect(() => {
-            const elements = document.querySelectorAll(".grow");
-        
-            const observer = new IntersectionObserver((entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("show");
-                }
-              });
-            });
-        
-            elements.forEach((el) => observer.observe(el));
-          }, []);
+  useEffect(() => {
+    const elements = document.querySelectorAll(".grow");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  }, []);
   return (
     <section className="chatbot-pricing-section">
       <div className="chatbot-container">
@@ -88,7 +88,9 @@ function ChatbotPricingSection() {
               key={plan.id}
               className={`chatbot-pricing-card ${
                 plan.featured ? "chatbot-pricing-card-featured" : ""
-              } grow`} style={{transitionDelay:`${plan.delay}`}}>
+              } grow`}
+              style={{ transitionDelay: `${plan.delay}` }}
+            >
               {plan.featured && (
                 <div className="chatbot-pricing-badge">
                   <Star size={12} fill="currentColor" />
@@ -123,8 +125,8 @@ function ChatbotPricingSection() {
                 ))}
               </ul>
 
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className={`chatbot-pricing-btn ${
                   plan.featured
                     ? "chatbot-pricing-btn-featured"
@@ -132,7 +134,7 @@ function ChatbotPricingSection() {
                 }`}
               >
                 {plan.buttonText}
-              </a>
+              </Link>
             </article>
           ))}
         </div>

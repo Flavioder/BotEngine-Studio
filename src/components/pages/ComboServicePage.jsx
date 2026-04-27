@@ -1,22 +1,22 @@
 import "../styles/ComboServicePage.css";
 import { Bot, Globe, TrendingUp, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function ComboServicePage() {
-
   useEffect(() => {
-              const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
-          
-              const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                  }
-                });
-              });
-          
-              elements.forEach((el) => observer.observe(el));
-            }, []);
+    const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  }, []);
 
   return (
     <section className="combo-page">
@@ -33,12 +33,15 @@ function ComboServicePage() {
           </p>
 
           <div className="combo-cta">
-            <a href="/contact" className="combo-service-btn combo-btn-primary">
+            <Link to="/contact" className="combo-service-btn combo-btn-primary">
               Merr Demo
-            </a>
-            <a href="/packages" className="combo-service-btn combo-btn-outline">
+            </Link>
+            <Link
+              to="/packages"
+              className="combo-service-btn combo-btn-outline"
+            >
               Shiko Paketat
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -58,19 +61,19 @@ function ComboServicePage() {
           <h2>Zgjidhja jonë 🔥</h2>
 
           <div className="solution-grid fade-up1">
-            <div className="solution-card" style={{transitionDelay:`0.2s`}}>
+            <div className="solution-card" style={{ transitionDelay: `0.2s` }}>
               <Globe />
               <h3>Website Premium</h3>
               <p>Design modern i fokusuar në shitje</p>
             </div>
 
-            <div className="solution-card" style={{transitionDelay:`0.3s`}}>
+            <div className="solution-card" style={{ transitionDelay: `0.3s` }}>
               <Bot />
               <h3>AI Chatbot</h3>
               <p>Automatizon komunikimin 24/7</p>
             </div>
 
-            <div className="solution-card" style={{transitionDelay:`0.4s`}}>
+            <div className="solution-card" style={{ transitionDelay: `0.4s` }}>
               <TrendingUp />
               <h3>Rritje Konvertimesh</h3>
               <p>System që kthen vizitorët në klientë</p>
@@ -83,7 +86,7 @@ function ComboServicePage() {
           <h2>Çfarë përfshin paketa</h2>
 
           <div className="features-grid fade-up1">
-            <div style={{transitionDelay:"0.2s"}}>
+            <div style={{ transitionDelay: "0.2s" }}>
               <h4>Website</h4>
               <ul>
                 <li>Landing page / multi-page</li>
@@ -93,7 +96,7 @@ function ComboServicePage() {
               </ul>
             </div>
 
-            <div style={{transitionDelay:"0.2s"}}>
+            <div style={{ transitionDelay: "0.2s" }}>
               <h4>Chatbot</h4>
               <ul>
                 <li>FAQ + Lead capture</li>
@@ -110,10 +113,10 @@ function ComboServicePage() {
           <h2>Si funksionon?</h2>
 
           <div className="process-steps fade-up1">
-            <div style={{transitionDelay:"0.2s"}}>1. Konsultim</div>
-            <div style={{transitionDelay:"0.3s"}}>2. Strategji</div>
-            <div style={{transitionDelay:"0.4s"}}>3. Zhvillim</div>
-            <div style={{transitionDelay:"0.5s"}}>4. Launch 🚀</div>
+            <div style={{ transitionDelay: "0.2s" }}>1. Konsultim</div>
+            <div style={{ transitionDelay: "0.3s" }}>2. Strategji</div>
+            <div style={{ transitionDelay: "0.4s" }}>3. Zhvillim</div>
+            <div style={{ transitionDelay: "0.5s" }}>4. Launch 🚀</div>
           </div>
         </div>
 
@@ -133,20 +136,20 @@ function ComboServicePage() {
               </p>
 
               <div className="website-service-cta-actions">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="website-service-btn website-service-btn-primary"
                 >
                   <span>Kërko Ofertë</span>
                   <ArrowRight size={18} />
-                </a>
+                </Link>
 
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="website-service-btn website-service-btn-secondary"
                 >
                   Shkruaj Tani
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import "../styles/ChatbotServicePage.css";
 import ChatbotPricingSection from "./ChatbotPricingSection";
+import { Link } from "react-router-dom";
 import {
   Bot,
   MessageSquareMore,
@@ -17,27 +18,24 @@ import {
 import { FaInstagram } from "react-icons/fa";
 import { useEffect } from "react";
 
-
 const problems = [
   {
     title: "Përgjigje të vonuara",
     text: "Klientët largohen kur nuk marrin përgjigje menjëherë në DM ose në website.",
     icon: <Clock3 size={22} />,
-    delay:"0.1s",
+    delay: "0.1s",
   },
   {
     title: "Humbje lead-esh",
     text: "Pa automatizim, shumë vizitorë largohen pa lënë kontakt dhe pa bërë hapin tjetër.",
     icon: <Users size={22} />,
-    delay:"0.2s",
-
+    delay: "0.2s",
   },
   {
     title: "Përsëritje e pyetjeve",
     text: "Biznesi humbet kohë duke iu përgjigjur të njëjtave pyetje çdo ditë.",
     icon: <MessageSquareMore size={22} />,
-    delay:"0.3s",
-
+    delay: "0.3s",
   },
 ];
 
@@ -54,19 +52,17 @@ const integrations = [
   {
     name: "Instagram",
     icon: <FaInstagram size={24} />,
-    delay:"0.2s",
+    delay: "0.2s",
   },
   {
     name: "WhatsApp",
     icon: <MessageCircle size={24} />,
-    delay:"0.3s",
-
+    delay: "0.3s",
   },
   {
     name: "Website",
     icon: <Globe size={24} />,
-    delay:"0.4s",
-
+    delay: "0.4s",
   },
 ];
 
@@ -75,46 +71,42 @@ const processSteps = [
     title: "Analizë e biznesit",
     text: "Kuptojmë produktin, pyetjet e klientëve dhe objektivin e chatbot-it.",
     icon: <Bot size={22} />,
-    delay:"0.3s",
+    delay: "0.3s",
   },
   {
     title: "Ndërtim & trajnimi",
     text: "Krijojmë flow-t, përgjigjet dhe logjikën sipas skenarëve realë të biznesit tuaj.",
     icon: <Workflow size={22} />,
-    delay:"0.4s",
-
+    delay: "0.4s",
   },
   {
     title: "Integrim",
     text: "E lidhim chatbot-in me kanalet ku klientët tuaj komunikojnë më shumë.",
     icon: <Settings size={22} />,
-    delay:"0.5s",
-
+    delay: "0.5s",
   },
   {
     title: "Launch & optimizim",
     text: "Publikojmë chatbot-in dhe e përmirësojmë sipas përdorimit real.",
     icon: <Rocket size={22} />,
-    delay:"0.6s",
-
+    delay: "0.6s",
   },
 ];
 
-
 function ChatbotServicePage() {
-   useEffect(() => {
-          const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
-      
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-              }
-            });
-          });
-      
-          elements.forEach((el) => observer.observe(el));
-        }, []);
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  }, []);
   return (
     <main className="chatbot-page">
       <section className="chatbot-hero">
@@ -131,12 +123,12 @@ function ChatbotServicePage() {
           </p>
 
           <div className="chatbot-hero-actions">
-            <a href="/contact" className="chatbot-btn chatbot-btn-primary">
+            <Link to="/contact" className="chatbot-btn chatbot-btn-primary">
               Merr Demo
-            </a>
-            <a href="/contact" className="chatbot-btn chatbot-btn-secondary">
+            </Link>
+            <Link to="/contact" className="chatbot-btn chatbot-btn-secondary">
               Kërko Ofertë
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -186,7 +178,11 @@ function ChatbotServicePage() {
 
           <div className="chatbot-grid-3">
             {problems.map((item, index) => (
-              <article className="chatbot-card fade-up1" key={index} style={{transitionDelay:`${item.delay}`}}>
+              <article
+                className="chatbot-card fade-up1"
+                key={index}
+                style={{ transitionDelay: `${item.delay}` }}
+              >
                 <div className="chatbot-icon purple">{item.icon}</div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
@@ -227,7 +223,11 @@ function ChatbotServicePage() {
 
           <div className="chatbot-integrations-grid">
             {integrations.map((item, index) => (
-              <article className="chatbot-integration-card fade-up1" key={index} style={{transitionDelay:`${item.delay}`}}>
+              <article
+                className="chatbot-integration-card fade-up1"
+                key={index}
+                style={{ transitionDelay: `${item.delay}` }}
+              >
                 <div className="chatbot-icon cyan">{item.icon}</div>
                 <h3>{item.name}</h3>
               </article>
@@ -244,7 +244,11 @@ function ChatbotServicePage() {
 
           <div className="chatbot-process-grid">
             {processSteps.map((step, index) => (
-              <article className="chatbot-process-card fade-up1" key={index} style={{transitionDelay:`${step.delay}`}}>
+              <article
+                className="chatbot-process-card fade-up1"
+                key={index}
+                style={{ transitionDelay: `${step.delay}` }}
+              >
                 <div className="chatbot-process-number">0{index + 1}</div>
 
                 <div className="chatbot-icon purple">{step.icon}</div>
@@ -269,14 +273,14 @@ function ChatbotServicePage() {
             </p>
 
             <div className="chatbot-cta-actions">
-              <a href="/contact" className="chatbot-btn chatbot-btn-primary">
+              <Link to="/contact" className="chatbot-btn chatbot-btn-primary">
                 <span>Merr Demo</span>
                 <ArrowRight size={18} />
-              </a>
+              </Link>
 
-              <a href="/contact" className="chatbot-btn chatbot-btn-secondary">
+              <Link to="/contact" className="chatbot-btn chatbot-btn-secondary">
                 Kërko Ofertë
-              </a>
+              </Link>
             </div>
           </div>
         </div>
