@@ -4,10 +4,14 @@
   z-index: 1000;
   width: 100%;
   padding: 18px 0;
-  background: rgba(4, 8, 24, 0.45);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  /* 🔥 kjo është çelësi */
+  transform: translateZ(0);
+  will-change: backdrop-filter;
 }
 
 .navbar-container {
