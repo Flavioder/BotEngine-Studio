@@ -14,7 +14,7 @@ body,
 
 /* ROOT FIX (shumë i rëndësishëm) */
 #root {
-  background: transparent;
+  background: inherit;
   display: flex;
   flex-direction: column;
 }
