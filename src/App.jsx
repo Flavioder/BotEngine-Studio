@@ -11,6 +11,7 @@ import ContactPage from "./components/pages/ContactPage";
 import ChatbotServicePage from "./components/pages/ChatbotServicePage";
 import WebsiteServicePage from "./components/pages/WebsiteServicePage";
 import ComboServicePage from "./components/pages/ComboServicePage";
+import ProjectDetailPage from "./components/pages/ProjectDetailPage";
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
         <Route path="/chatbot-service" element={<ChatbotServicePage />} />
         <Route path="/website-service" element={<WebsiteServicePage />} />
         <Route path="/combo-service" element={<ComboServicePage />} />
+        <Route path="/portfolio/:slug" element={<ProjectDetailPage />} />
       </Routes>
       <Footer />
     </>

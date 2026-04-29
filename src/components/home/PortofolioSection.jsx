@@ -1,51 +1,23 @@
+// src/components/PortofolioSection.jsx
 import "../styles/PortofolioSection.css";
-import { Building2, ShoppingBag, Stethoscope } from "lucide-react";
 import { useEffect } from "react";
-
-const portfolioItems = [
-  {
-    id: 1,
-    title: "Hotel Luxury",
-    subtitle: "Website + Chatbot",
-    icon: <Building2 size={44} strokeWidth={1.9} />,
-    image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-    variant: "teal-purple",
-  },
-  {
-    id: 2,
-    title: "E-Commerce Store",
-    subtitle: "Website + AI Assistant",
-    icon: <ShoppingBag size={44} strokeWidth={1.9} />,
-    image:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80",
-    variant: "purple-teal",
-  },
-  {
-    id: 3,
-    title: "Klinikë Dentare",
-    subtitle: "Chatbot Reservation",
-    icon: <Stethoscope size={44} strokeWidth={1.9} />,
-    image:
-      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80",
-    variant: "teal-indigo",
-  },
-];
-
+import { useNavigate } from "react-router-dom";
+import { portfolioItems } from "../../data/portofolioData";
 function PortofolioSection() {
-   useEffect(() => {
-            const elements = document.querySelectorAll(".fade-up1");
-        
-            const observer = new IntersectionObserver((entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("show");
-                }
-              });
-            });
-        
-            elements.forEach((el) => observer.observe(el));
-          }, []);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-up1");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+    elements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
     <section className="portfolio-section" id="portfolio">
       <div className="portfolio-container">
@@ -58,7 +30,12 @@ function PortofolioSection() {
 
         <div className="portfolio-grid fade-up1">
           {portfolioItems.map((item) => (
-            <article key={item.id} className={`portfolio-card ${item.variant}`}>
+            <article
+              key={item.id}
+              className={`portfolio-card ${item.variant}`}
+              onClick={() => navigate(`/portfolio/${item.slug}`)}
+              style={{ cursor: "pointer" }}
+            >
               <div className="portfolio-image">
                 <img src={item.image} alt={item.title} />
               </div>

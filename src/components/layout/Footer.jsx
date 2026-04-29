@@ -41,11 +41,13 @@ function Footer() {
             <h4>Na kontaktoni</h4>
 
             <a
-              href="mailto:info@botenginestudio.com"
+              href="https://mail.google.com/mail/?view=cm&to=botenginestudio@gmail.com&su=Kërkesë%20për%20Shërbim"
+              target="_blank"
+              rel="noopener noreferrer"
               className="footer-contact-item"
             >
               <Mail size={17} />
-              <span>info@botenginestudio.com</span>
+              <span>botenginestudio@gmail.com</span>
             </a>
 
             <a href="tel:+355694471238" className="footer-contact-item">
@@ -65,7 +67,7 @@ function Footer() {
         <div className="footer-divider"></div>
 
         <div className="footer-bottom">
-          <p>© 2025 BotEngineStudio. Të gjitha të drejtat e rezervuara.</p>
+          <p>© 2026 BotEngineStudio. Të gjitha të drejtat e rezervuara.</p>
         </div>
       </div>
     </footer>

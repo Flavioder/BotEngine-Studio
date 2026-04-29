@@ -4,19 +4,19 @@ import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { useEffect } from "react";
 
 function ContactPage() {
-   useEffect(() => {
-                const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
-            
-                const observer = new IntersectionObserver((entries) => {
-                  entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                      entry.target.classList.add("show");
-                    }
-                  });
-                });
-            
-                elements.forEach((el) => observer.observe(el));
-              }, []);
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  }, []);
   return (
     <main className="contact-page">
       <section className="contact-hero">
@@ -51,7 +51,7 @@ function ContactPage() {
                 <div className="contact-form-row">
                   <div className="contact-field">
                     <label>Emri</label>
-                    <input type="text" placeholder="Shkruani emrin tuaj"/>
+                    <input type="text" placeholder="Shkruani emrin tuaj" />
                   </div>
 
                   <div className="contact-field">
@@ -108,7 +108,7 @@ function ContactPage() {
                 </div>
                 <div>
                   <h3>Email</h3>
-                  <p>info@botenginestudio.com</p>
+                  <p>botenginestudio@gmail.com</p>
                 </div>
               </div>
 
