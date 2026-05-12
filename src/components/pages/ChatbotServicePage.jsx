@@ -14,176 +14,112 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react";
-
 import { FaInstagram } from "react-icons/fa";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-const problems = [
-  {
-    title: "Përgjigje të vonuara",
-    text: "Klientët largohen kur nuk marrin përgjigje menjëherë në DM ose në website.",
-    icon: <Clock3 size={22} />,
-    delay: "0.1s",
-  },
-  {
-    title: "Humbje lead-esh",
-    text: "Pa automatizim, shumë vizitorë largohen pa lënë kontakt dhe pa bërë hapin tjetër.",
-    icon: <Users size={22} />,
-    delay: "0.2s",
-  },
-  {
-    title: "Përsëritje e pyetjeve",
-    text: "Biznesi humbet kohë duke iu përgjigjur të njëjtave pyetje çdo ditë.",
-    icon: <MessageSquareMore size={22} />,
-    delay: "0.3s",
-  },
+const problemIcons = [
+  <Clock3 size={22} />,
+  <Users size={22} />,
+  <MessageSquareMore size={22} />,
 ];
-
-const features = [
-  "Përgjigje automatike 24/7",
-  "Lead capture dhe mbledhje kontaktesh",
-  "FAQ të personalizuara sipas biznesit",
-  "Drejtim i klientit drejt porosisë ose booking",
-  "Follow-up automatik",
-  "Tone of voice sipas brand-it tuaj",
+const processIcons = [
+  <Bot size={22} />,
+  <Workflow size={22} />,
+  <Settings size={22} />,
+  <Rocket size={22} />,
 ];
-
+const processDelays = ["0.3s", "0.4s", "0.5s", "0.6s"];
+const problemDelays = ["0.1s", "0.2s", "0.3s"];
 const integrations = [
-  {
-    name: "Instagram",
-    icon: <FaInstagram size={24} />,
-    delay: "0.2s",
-  },
-  {
-    name: "WhatsApp",
-    icon: <MessageCircle size={24} />,
-    delay: "0.3s",
-  },
-  {
-    name: "Website",
-    icon: <Globe size={24} />,
-    delay: "0.4s",
-  },
-];
-
-const processSteps = [
-  {
-    title: "Analizë e biznesit",
-    text: "Kuptojmë produktin, pyetjet e klientëve dhe objektivin e chatbot-it.",
-    icon: <Bot size={22} />,
-    delay: "0.3s",
-  },
-  {
-    title: "Ndërtim & trajnimi",
-    text: "Krijojmë flow-t, përgjigjet dhe logjikën sipas skenarëve realë të biznesit tuaj.",
-    icon: <Workflow size={22} />,
-    delay: "0.4s",
-  },
-  {
-    title: "Integrim",
-    text: "E lidhim chatbot-in me kanalet ku klientët tuaj komunikojnë më shumë.",
-    icon: <Settings size={22} />,
-    delay: "0.5s",
-  },
-  {
-    title: "Launch & optimizim",
-    text: "Publikojmë chatbot-in dhe e përmirësojmë sipas përdorimit real.",
-    icon: <Rocket size={22} />,
-    delay: "0.6s",
-  },
+  { name: "Instagram", icon: <FaInstagram size={24} />, delay: "0.2s" },
+  { name: "WhatsApp", icon: <MessageCircle size={24} />, delay: "0.3s" },
+  { name: "Website", icon: <Globe size={24} />, delay: "0.4s" },
 ];
 
 function ChatbotServicePage() {
+  const { t } = useTranslation();
+  const problems = t("chatbot.problems", { returnObjects: true });
+  const features = t("chatbot.features", { returnObjects: true });
+  const processSteps = t("chatbot.processSteps", { returnObjects: true });
+
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("show");
       });
     });
-
     elements.forEach((el) => observer.observe(el));
   }, []);
+
   return (
     <main className="chatbot-page">
+      {/* HERO */}
       <section className="chatbot-hero">
         <div className="chatbot-container">
-          <span className="chatbot-label">CHATBOT SERVICE</span>
-
+          <span className="chatbot-label">{t("chatbot.label")}</span>
           <h1 className="chatbot-title">
-            Chatbot AI që <span>përgjigjet, ndihmon dhe konverton</span>
+            {t("chatbot.title")} <span>{t("chatbot.titleSpan")}</span>
           </h1>
-
-          <p className="chatbot-subtitle">
-            Një chatbot i personalizuar për biznesin tuaj që punon 24/7,
-            përgjigjet në sekonda dhe kthen vizitorët në klientë pa humbur kohë.
-          </p>
-
+          <p className="chatbot-subtitle">{t("chatbot.subtitle")}</p>
           <div className="chatbot-hero-actions">
             <Link to="/contact" className="chatbot-btn chatbot-btn-primary">
-              Merr Demo
+              {t("chatbot.btnDemo")}
             </Link>
             <Link to="/contact" className="chatbot-btn chatbot-btn-secondary">
-              Kërko Ofertë
+              {t("chatbot.btnOffer")}
             </Link>
           </div>
         </div>
       </section>
 
+      {/* INTRO */}
       <section className="chatbot-intro">
         <div className="chatbot-container chatbot-intro-grid fade-up1">
           <div className="chatbot-intro-card">
             <div className="chatbot-icon cyan">
               <Bot size={28} />
             </div>
-            <h2>Çfarë është chatbot-i ynë?</h2>
-            <p>
-              Chatbot-i ynë është një asistent virtual i trajnuar për biznesin
-              tuaj. Ai përgjigjet automatikisht ndaj pyetjeve, ndihmon klientin
-              të gjejë informacionin e duhur dhe e çon drejt veprimit të
-              dëshiruar: porosi, booking, kontakt ose lead.
-            </p>
+            <h2>{t("chatbot.whatTitle")}</h2>
+            <p>{t("chatbot.whatText")}</p>
           </div>
 
           <div className="chatbot-preview-card">
             <div className="chatbot-preview-top">
               <span className="chatbot-status-dot"></span>
-              <span>BotEngine AI · Online</span>
+              <span>{t("chatbot.previewStatus")}</span>
             </div>
-
             <div className="chatbot-preview-messages">
               <div className="chatbot-msg chatbot-msg-bot">
-                Përshëndetje 👋 Si mund t’ju ndihmoj?
+                {t("chatbot.previewMsg1")}
               </div>
               <div className="chatbot-msg chatbot-msg-user">
-                Dua të di çmimet
+                {t("chatbot.previewMsg2")}
               </div>
               <div className="chatbot-msg chatbot-msg-bot">
-                Sigurisht. Paketat fillojnë nga një setup fillestar dhe mund të
-                personalizohen sipas biznesit tuaj.
+                {t("chatbot.previewMsg3")}
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* PROBLEMS */}
       <section className="chatbot-problems">
         <div className="chatbot-container">
           <h2 className="chatbot-section-title">
-            Çfarë problemesh <span>zgjidh?</span>
+            {t("chatbot.problemsTitle")}{" "}
+            <span>{t("chatbot.problemsTitleSpan")}</span>
           </h2>
-
           <div className="chatbot-grid-3">
             {problems.map((item, index) => (
               <article
                 className="chatbot-card fade-up1"
                 key={index}
-                style={{ transitionDelay: `${item.delay}` }}
+                style={{ transitionDelay: problemDelays[index] }}
               >
-                <div className="chatbot-icon purple">{item.icon}</div>
+                <div className="chatbot-icon purple">{problemIcons[index]}</div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </article>
@@ -194,12 +130,13 @@ function ChatbotServicePage() {
 
       <ChatbotPricingSection />
 
+      {/* FEATURES */}
       <section className="chatbot-features">
         <div className="chatbot-container">
           <h2 className="chatbot-section-title">
-            Features që bëjnë <span>diferencën</span>
+            {t("chatbot.featuresTitle")}{" "}
+            <span>{t("chatbot.featuresTitleSpan")}</span>
           </h2>
-
           <div className="chatbot-features-card fade-in">
             <div className="chatbot-features-grid">
               {features.map((feature, index) => (
@@ -215,18 +152,19 @@ function ChatbotServicePage() {
         </div>
       </section>
 
+      {/* INTEGRATIONS */}
       <section className="chatbot-integrations">
         <div className="chatbot-container">
           <h2 className="chatbot-section-title">
-            Integrime me <span>kanalet kryesore</span>
+            {t("chatbot.integrationsTitle")}{" "}
+            <span>{t("chatbot.integrationsTitleSpan")}</span>
           </h2>
-
           <div className="chatbot-integrations-grid">
             {integrations.map((item, index) => (
               <article
                 className="chatbot-integration-card fade-up1"
                 key={index}
-                style={{ transitionDelay: `${item.delay}` }}
+                style={{ transitionDelay: item.delay }}
               >
                 <div className="chatbot-icon cyan">{item.icon}</div>
                 <h3>{item.name}</h3>
@@ -236,22 +174,22 @@ function ChatbotServicePage() {
         </div>
       </section>
 
+      {/* PROCESS */}
       <section className="chatbot-process">
         <div className="chatbot-container">
           <h2 className="chatbot-section-title">
-            Procesi i <span>implementimit</span>
+            {t("chatbot.processTitle")}{" "}
+            <span>{t("chatbot.processTitleSpan")}</span>
           </h2>
-
           <div className="chatbot-process-grid">
             {processSteps.map((step, index) => (
               <article
                 className="chatbot-process-card fade-up1"
                 key={index}
-                style={{ transitionDelay: `${step.delay}` }}
+                style={{ transitionDelay: processDelays[index] }}
               >
                 <div className="chatbot-process-number">0{index + 1}</div>
-
-                <div className="chatbot-icon purple">{step.icon}</div>
+                <div className="chatbot-icon purple">{processIcons[index]}</div>
                 <h3>{step.title}</h3>
                 <p>{step.text}</p>
               </article>
@@ -260,26 +198,21 @@ function ChatbotServicePage() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="chatbot-cta">
         <div className="chatbot-container">
           <div className="chatbot-cta-card">
             <h2>
-              Gati për një chatbot që <span>punon për ju 24/7?</span>
+              {t("chatbot.ctaTitle")} <span>{t("chatbot.ctaTitleSpan")}</span>
             </h2>
-
-            <p>
-              Merrni një demo ose një ofertë të personalizuar sipas biznesit,
-              industrisë dhe kanalit ku doni ta implementoni.
-            </p>
-
+            <p>{t("chatbot.ctaText")}</p>
             <div className="chatbot-cta-actions">
               <Link to="/contact" className="chatbot-btn chatbot-btn-primary">
-                <span>Merr Demo</span>
+                <span>{t("chatbot.ctaBtnDemo")}</span>
                 <ArrowRight size={18} />
               </Link>
-
               <Link to="/contact" className="chatbot-btn chatbot-btn-secondary">
-                Kërko Ofertë
+                {t("chatbot.ctaBtnOffer")}
               </Link>
             </div>
           </div>

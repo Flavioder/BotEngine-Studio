@@ -1,0 +1,590 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "packages": "Packages",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "getStarted": "Get Started"
+  },
+  "footer": {
+    "tagline": "Intelligent automation and premium design for modern businesses.",
+    "services": "Services",
+    "company": "Company",
+    "contactTitle": "Contact Us",
+    "followTitle": "Follow Us",
+    "followText": "Stay connected with us and see our latest projects and updates.",
+    "copyright": "© 2026 BotEngineStudio. All rights reserved.",
+    "links": {
+      "aiChatbot": "AI Chatbot",
+      "webDev": "Web Development",
+      "combo": "Premium Combo",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "Automate your business",
+    "titleSpan": "& boost your sales",
+    "subtitle": "Intelligent chatbot + Modern website that responds in seconds and converts visitors into customers",
+    "btnPackages": "View Packages",
+    "btnDemo": "Get Demo",
+    "feature1": "24/7 Automated",
+    "feature2": "Setup in 48h",
+    "feature3": "High ROI"
+  },
+  "problems": {
+    "label": "PROBLEMS",
+    "title": "Are you",
+    "titleSpan": "losing customers?",
+    "items": [
+      {
+        "title": "Slow Responses",
+        "text": "Customers wait hours for a reply. 78% of buyers purchase from the first business that responds."
+      },
+      {
+        "title": "Lost Leads",
+        "text": "Without automation, visitors leave without leaving contact info. Opportunities are lost every day."
+      },
+      {
+        "title": "Unprofessional Website",
+        "text": "A poor website lowers credibility. 94% of first impressions are based on design."
+      }
+    ]
+  },
+  "services": {
+    "label": "SERVICES",
+    "title": "Complete",
+    "titleSpan": "digital solutions",
+    "badge": "Popular",
+    "btnMore": "Learn more →",
+    "items": [
+      {
+        "title": "AI Chatbot Automation",
+        "text": "Intelligent 24/7 chatbot that qualifies leads, answers questions, and grows sales automatically.",
+        "features": [
+          "Instant responses",
+          "WhatsApp/Instagram integration",
+          "Detailed analytics"
+        ]
+      },
+      {
+        "title": "Website Development",
+        "text": "Modern, fast, and conversion-optimized website that represents your business professionally.",
+        "features": [
+          "Responsive design",
+          "SEO optimization",
+          "High performance"
+        ]
+      },
+      {
+        "title": "Website + Chatbot Combo",
+        "text": "The complete package: premium website + AI chatbot for a full digital presence and maximum conversion.",
+        "features": [
+          "Everything in one package",
+          "Reduced price",
+          "Priority support"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "label": "PROCESS",
+    "title": "How does",
+    "titleSpan": "it work?",
+    "steps": [
+      { "title": "Consultation", "text": "We discuss your business needs" },
+      {
+        "title": "Choose a Package",
+        "text": "Select the right package for you"
+      },
+      { "title": "Development", "text": "We build your solution" },
+      { "title": "Launch", "text": "We launch and monitor" }
+    ]
+  },
+  "pricing": {
+    "label": "PRICING",
+    "title": "Choose",
+    "titleSpan": "your package",
+    "badge": "Recommended",
+    "plans": [
+      {
+        "label": "STARTER",
+        "title": "Chatbot Starter",
+        "suffix": "/one-time + €99/month",
+        "features": [
+          "Personalized AI Chatbot",
+          "Website integration",
+          "Monthly reports",
+          "Email support"
+        ],
+        "buttonText": "Start Now"
+      },
+      {
+        "label": "PROFESSIONAL",
+        "title": "Website Professional",
+        "suffix": "/one-time",
+        "features": [
+          "Modern responsive website",
+          "Up to 7 pages",
+          "Basic SEO",
+          "1 year hosting",
+          "SSL certificate"
+        ],
+        "buttonText": "Start Now"
+      },
+      {
+        "label": "PREMIUM",
+        "title": "Premium Combo",
+        "suffix": "/one-time + €99/month",
+        "features": [
+          "Premium website (up to 12 pages)",
+          "Advanced AI Chatbot",
+          "WhatsApp + Instagram integration",
+          "Advanced analytics",
+          "24/7 priority support",
+          "Free hosting + domain"
+        ],
+        "buttonText": "Get Premium"
+      }
+    ]
+  },
+  "portfolio": {
+    "label": "PORTFOLIO",
+    "title": "Our",
+    "titleSpan": "Projects",
+    "btnView": "View Project"
+  },
+  "industries": {
+    "label": "WHO IT'S FOR",
+    "title": "Solutions for",
+    "titleSpan": "every industry",
+    "items": [
+      "Hotels",
+      "E-Commerce",
+      "Clinics",
+      "Restaurants",
+      "Local Businesses"
+    ]
+  },
+  "why": {
+    "label": "WHY US",
+    "title": "Why",
+    "titleSpan": "BotEngineStudio?",
+    "items": [
+      {
+        "title": "Speed",
+        "text": "Delivery within 48 hours. Your business doesn't wait."
+      },
+      {
+        "title": "Automation",
+        "text": "AI that works 24/7 without interruption and without errors."
+      },
+      {
+        "title": "Premium Design",
+        "text": "Unique designs that build trust and professionalism."
+      },
+      {
+        "title": "Conversion",
+        "text": "Every element is optimized to turn visitors into customers."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Ready to",
+    "titleSpan": "transform",
+    "titleEnd": "your business?",
+    "text": "Start today with a free consultation. Get your AI chatbot and modern website within 48 hours.",
+    "btnDemo": "Get Demo",
+    "btnContact": "Contact Us"
+  },
+  "about": {
+    "label": "ABOUT US",
+    "title": "We build",
+    "titleSpan": "digital experiences",
+    "titleEnd": "that bring customers",
+    "subtitle": "BotEngineStudio is not just an agency. We create systems that automate, optimize, and grow your business every day.",
+    "missionTitle": "Our Mission",
+    "missionText": "To help businesses grow faster using AI, automation, and modern design that converts.",
+    "visionTitle": "Our Vision",
+    "visionText": "To become the new standard for the online presence of modern businesses in Albania and beyond.",
+    "storyTitle": "Why does",
+    "storyTitleSpan": "BotEngineStudio exist?",
+    "storyText1": "Many businesses lose customers every day for a simple reason: they respond late, lack a professional online presence, and don't use automation.",
+    "storyText2": "We built BotEngineStudio to solve this problem. We combine AI technology with modern design to create systems that work for you 24/7.",
+    "valuesTitle": "What sets",
+    "valuesTitleSpan": "us apart?",
+    "values": [
+      { "title": "Speed", "text": "Implementation within 48 hours." },
+      {
+        "title": "Automation",
+        "text": "Systems that work without intervention."
+      },
+      {
+        "title": "Premium Design",
+        "text": "Websites that build trust and conversion."
+      }
+    ],
+    "ctaTitle": "Ready to work",
+    "ctaTitleSpan": "together?",
+    "ctaBtn": "Let's Start"
+  },
+  "contact": {
+    "label": "CONTACT",
+    "title": "Let's talk about",
+    "titleSpan": "your project",
+    "subtitle": "Write to us about a website, AI chatbot, or a complete solution for your business. We'll get back to you as soon as possible.",
+    "formTitle": "Send us a message",
+    "formSubtitle": "Fill out the form and we'll contact you to better understand your business needs.",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Enter your last name",
+    "email": "Email",
+    "emailPlaceholder": "email@example.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+355...",
+    "service": "Service you're interested in",
+    "servicePlaceholder": "Choose an option",
+    "serviceOptions": [
+      "AI Chatbot",
+      "Website Development",
+      "Website + Chatbot Combo",
+      "Other"
+    ],
+    "message": "Message",
+    "messagePlaceholder": "Tell us a bit more about your project or business...",
+    "submitBtn": "Send Message",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location",
+    "location": "Tirana, Albania",
+    "followTitle": "Follow Us",
+    "followText": "Stay connected with us and see our latest projects and updates."
+  },
+  "chatbot": {
+    "label": "CHATBOT SERVICE",
+    "title": "AI Chatbot that",
+    "titleSpan": "responds, helps, and converts",
+    "subtitle": "A personalized chatbot for your business that works 24/7, responds in seconds, and turns visitors into customers without wasting time.",
+    "btnDemo": "Get Demo",
+    "btnOffer": "Request Offer",
+    "whatTitle": "What is our chatbot?",
+    "whatText": "Our chatbot is a virtual assistant trained for your business. It automatically responds to questions, helps customers find the right information, and directs them toward the desired action: order, booking, contact, or lead.",
+    "previewStatus": "BotEngine AI · Online",
+    "previewMsg1": "Hello 👋 How can I help you?",
+    "previewMsg2": "I want to know the prices",
+    "previewMsg3": "Of course. Packages start from an initial setup and can be customized for your business.",
+    "problemsTitle": "What problems",
+    "problemsTitleSpan": "does it solve?",
+    "problems": [
+      {
+        "title": "Delayed Responses",
+        "text": "Customers leave when they don't get an immediate response on DM or the website."
+      },
+      {
+        "title": "Lost Leads",
+        "text": "Without automation, many visitors leave without leaving contact info and without taking the next step."
+      },
+      {
+        "title": "Repetitive Questions",
+        "text": "The business wastes time answering the same questions every day."
+      }
+    ],
+    "featuresTitle": "Features that make",
+    "featuresTitleSpan": "the difference",
+    "features": [
+      "Automatic 24/7 responses",
+      "Lead capture and contact collection",
+      "Customized FAQs for your business",
+      "Guide customer toward order or booking",
+      "Automatic follow-up",
+      "Tone of voice matching your brand"
+    ],
+    "integrationsTitle": "Integrations with",
+    "integrationsTitleSpan": "key channels",
+    "processTitle": "The",
+    "processTitleSpan": "implementation process",
+    "processSteps": [
+      {
+        "title": "Business Analysis",
+        "text": "We understand your product, customer questions, and chatbot objectives."
+      },
+      {
+        "title": "Build & Training",
+        "text": "We create flows, responses, and logic based on real business scenarios."
+      },
+      {
+        "title": "Integration",
+        "text": "We connect the chatbot to the channels where your customers communicate most."
+      },
+      {
+        "title": "Launch & Optimization",
+        "text": "We publish the chatbot and improve it based on real usage."
+      }
+    ],
+    "ctaTitle": "Ready for a chatbot that",
+    "ctaTitleSpan": "works for you 24/7?",
+    "ctaText": "Get a demo or a personalized offer based on your business, industry, and the channel where you want to implement it.",
+    "ctaBtnDemo": "Get Demo",
+    "ctaBtnOffer": "Request Offer",
+    "pricingTitle": "Chatbot packages",
+    "pricingTitleSpan": "and pricing",
+    "pricingBadge": "Most chosen",
+    "plans": [
+      {
+        "label": "BASIC",
+        "title": "Starter",
+        "subtitle": "For businesses that want basic automation",
+        "features": [
+          "FAQ Bot (common questions)",
+          "Lead Capture Bot (collect contacts)",
+          "Website integration",
+          "Setup + testing"
+        ],
+        "buttonText": "Request Offer"
+      },
+      {
+        "label": "GROWTH",
+        "title": "Sales + Automation",
+        "subtitle": "For businesses that want real results",
+        "features": [
+          "FAQ Bot",
+          "Lead Capture Bot",
+          "Sales Funnel Bot",
+          "Cart Recovery Bot",
+          "Website integration + optimization",
+          "Conversion structure"
+        ],
+        "buttonText": "Most chosen"
+      },
+      {
+        "label": "PRO",
+        "title": "Full Automation",
+        "subtitle": "For serious businesses (hotels, e-commerce, services)",
+        "features": [
+          "Everything from Growth",
+          "Booking / Reservation Bot",
+          "Follow-up Bot",
+          "Custom flows for your business",
+          "Multi-channel integration",
+          "Conversion strategy"
+        ],
+        "buttonText": "Request Premium"
+      }
+    ]
+  },
+  "websiteService": {
+    "label": "WEBSITE SERVICE",
+    "title": "Modern website that",
+    "titleSpan": "looks great and converts",
+    "subtitle": "We build professional websites for businesses, hotels, clinics, landing pages, and e-commerce — with premium design, responsive and structured for results.",
+    "btnOffer": "Get Offer",
+    "btnContact": "Contact",
+    "typesTitle": "What types of",
+    "typesTitleSpan": "websites do we build?",
+    "types": [
+      {
+        "title": "Landing Page",
+        "text": "Focused page for offers, lead capture, and quick conversion."
+      },
+      {
+        "title": "Business Website",
+        "text": "Professional online presence for companies, services, and local brands."
+      },
+      {
+        "title": "Hotel Website",
+        "text": "Elegant presentation of rooms, services, and reservation options."
+      },
+      {
+        "title": "Clinic Website",
+        "text": "Modern page for trust, information, and quick patient contact."
+      },
+      {
+        "title": "E-Commerce",
+        "text": "Online store with clear structure for products, offers, and sales."
+      }
+    ],
+    "featuresTitle": "What does",
+    "featuresTitleSpan": "it include?",
+    "features": [
+      "Modern and premium design.",
+      "Responsive on phone, tablet, and desktop.",
+      "Basic SEO for structure and content.",
+      "Customized contact forms.",
+      "WhatsApp button for quick contact.",
+      "Free domain & hosting for 1 year."
+    ],
+    "benefitsTitle": "Why does a",
+    "benefitsTitleSpan": "well-built website matter?",
+    "benefits": [
+      {
+        "title": "Design that builds trust",
+        "text": "We build websites that look professional and give your business a serious presence."
+      },
+      {
+        "title": "Responsive on every device",
+        "text": "Your page works and looks great on desktop, tablet, and mobile."
+      },
+      {
+        "title": "Integrated basic SEO",
+        "text": "Optimized structure that helps Google understand and index your page."
+      },
+      {
+        "title": "Forms & integrations",
+        "text": "We can add contact form, WhatsApp, and chatbot for more leads."
+      }
+    ],
+    "processTitle": "How does",
+    "processTitleSpan": "the process work?",
+    "processSteps": [
+      {
+        "title": "Consultation & strategy",
+        "text": "We discuss your business, goals, and the type of page you need."
+      },
+      {
+        "title": "Design & structure",
+        "text": "We create the layout, content hierarchy, and user experience."
+      },
+      {
+        "title": "Development",
+        "text": "We build the page with focus on speed, clarity, and conversion."
+      },
+      {
+        "title": "Launch",
+        "text": "The page is published and ready for your real customers."
+      }
+    ],
+    "ctaTitle": "Ready for a website that",
+    "ctaTitleSpan": "takes your business to the next level?",
+    "ctaText": "Tell us what type of page you need and we'll provide a clear, modern, and personalized solution for your business.",
+    "ctaBtnOffer": "Request Offer",
+    "ctaBtnContact": "Write Now",
+    "pricingTitle": "Packages and",
+    "pricingTitleSpan": "starting prices",
+    "pricingBadge": "Most chosen",
+    "plans": [
+      {
+        "label": "STARTER",
+        "title": "Landing Page",
+        "suffix": "from",
+        "description": "For offers, lead generation, and focused presentation of a service or product.",
+        "features": [
+          "1 page (Landing Page)",
+          "Modern & clean design",
+          "Responsive (mobile/tablet)",
+          "CTA for conversion (buttons, sections)",
+          "Contact form",
+          "WhatsApp integration",
+          "Basic SEO (titles, structure)",
+          "Fast loading"
+        ],
+        "buttonText": "Request Offer"
+      },
+      {
+        "label": "BUSINESS",
+        "title": "Business Website",
+        "suffix": "from",
+        "description": "For businesses that want a professional and converting online presence.",
+        "features": [
+          "Up to 5 pages (Home, About, Services, Contact...)",
+          "Premium and professional design",
+          "Responsive on all devices",
+          "Conversion structure (UX/UI)",
+          "Advanced contact form",
+          "WhatsApp integration + CTA buttons",
+          "Basic SEO (structure + meta)",
+          "Performance optimization",
+          "Modern animations (smooth UI)"
+        ],
+        "buttonText": "Most chosen"
+      },
+      {
+        "label": "PREMIUM",
+        "title": "Premium Website",
+        "suffix": "from",
+        "description": "For hotels, clinics, and businesses that want a strong and unique presence.",
+        "features": [
+          "Up to 10+ pages",
+          "Unique design (no template)",
+          "Advanced UX/UI for conversion",
+          "Customized structure for your business",
+          "Admin dashboard (management panel)",
+          "Content management (text, photos, sections)",
+          "Advanced forms (lead capture)",
+          "Automatic lead saving",
+          "Domain + Hosting 1 year/Free",
+          "Basic SEO + Google structure",
+          "Advanced performance optimization",
+          "Premium animations & micro-interactions",
+          "Priority support"
+        ],
+        "buttonText": "Request Premium"
+      }
+    ]
+  },
+  "combo": {
+    "title": "Website +",
+    "titleSpan": "AI Chatbot",
+    "titleEnd": "in one package",
+    "subtitle": "We create a digital presence that is not only beautiful, but automatically converts visitors into customers.",
+    "btnDemo": "Get Demo",
+    "btnPackages": "View Packages",
+    "problemTitle": "Why do businesses lose customers?",
+    "problemItems": [
+      "Website without conversion ❌",
+      "Delayed responses ❌",
+      "Lost leads ❌"
+    ],
+    "solutionTitle": "Our solution 🔥",
+    "solutions": [
+      { "title": "Premium Website", "text": "Modern design focused on sales" },
+      { "title": "AI Chatbot", "text": "Automates communication 24/7" },
+      {
+        "title": "Conversion Growth",
+        "text": "System that turns visitors into customers"
+      }
+    ],
+    "featuresTitle": "What the package includes",
+    "websiteTitle": "Website",
+    "websiteFeatures": [
+      "Landing page / multi-page",
+      "Responsive design",
+      "Basic SEO",
+      "Contact forms"
+    ],
+    "chatbotTitle": "Chatbot",
+    "chatbotFeatures": [
+      "FAQ + Lead capture",
+      "Sales automation",
+      "24/7 responses",
+      "WhatsApp / Instagram integration"
+    ],
+    "processTitle": "How does it work?",
+    "processSteps": [
+      "1. Consultation",
+      "2. Strategy",
+      "3. Development",
+      "4. Launch 🚀"
+    ],
+    "ctaTitle": "Ready for a website that",
+    "ctaTitleSpan": "takes your business to the next level?",
+    "ctaText": "Tell us what type of page you need and we'll provide a clear, modern, and personalized solution for your business.",
+    "ctaBtnOffer": "Request Offer",
+    "ctaBtnContact": "Write Now"
+  },
+  "projectDetail": {
+    "notFound": "Project not found.",
+    "backBtn": "← Go back",
+    "backPortfolio": "Back to Portfolio",
+    "statusDone": "✓ Completed",
+    "statusWip": "⏳ In Progress",
+    "sectionAbout": "ABOUT THE PROJECT",
+    "sectionGallery": "PROJECT VIEW",
+    "sectionFeatures": "FEATURES",
+    "sectionStack": "TECHNOLOGIES",
+    "btnLive": "View Live",
+    "btnSimilar": "Request a similar project",
+    "btnOther": "← Other Projects"
+  }
+}

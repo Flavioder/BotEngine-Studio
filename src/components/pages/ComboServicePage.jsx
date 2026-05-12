@@ -2,19 +2,25 @@ import "../styles/ComboServicePage.css";
 import { Bot, Globe, TrendingUp, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
+const solutionIcons = [<Globe />, <Bot />, <TrendingUp />];
 
 function ComboServicePage() {
+  const { t } = useTranslation();
+  const problemItems = t("combo.problemItems", { returnObjects: true });
+  const solutions = t("combo.solutions", { returnObjects: true });
+  const websiteFeatures = t("combo.websiteFeatures", { returnObjects: true });
+  const chatbotFeatures = t("combo.chatbotFeatures", { returnObjects: true });
+  const processSteps = t("combo.processSteps", { returnObjects: true });
+
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("show");
       });
     });
-
     elements.forEach((el) => observer.observe(el));
   }, []);
 
@@ -24,131 +30,110 @@ function ComboServicePage() {
         {/* HERO */}
         <div className="combo-hero">
           <h1>
-            Website + <span>AI Chatbot</span> në një paketë
+            {t("combo.title")} <span>{t("combo.titleSpan")}</span>{" "}
+            {t("combo.titleEnd")}
           </h1>
-
-          <p>
-            Krijojmë një prezencë dixhitale që nuk është vetëm e bukur, por
-            konverton vizitorët në klientë automatikisht.
-          </p>
-
+          <p>{t("combo.subtitle")}</p>
           <div className="combo-cta">
             <Link to="/contact" className="combo-service-btn combo-btn-primary">
-              Merr Demo
+              {t("combo.btnDemo")}
             </Link>
             <Link
               to="/packages"
               className="combo-service-btn combo-btn-outline"
             >
-              Shiko Paketat
+              {t("combo.btnPackages")}
             </Link>
           </div>
         </div>
 
         {/* PROBLEM */}
         <div className="combo-problem">
-          <h2>Pse bizneset humbasin klientë?</h2>
-
+          <h2>{t("combo.problemTitle")}</h2>
           <div className="combo-problem-grid">
-            <div>Website pa konvertim ❌</div>
-            <div>Përgjigje të vonuara ❌</div>
-            <div>Lead-e të humbura ❌</div>
+            {problemItems.map((item, index) => (
+              <div key={index}>{item}</div>
+            ))}
           </div>
         </div>
 
         {/* SOLUTION */}
         <div className="combo-solution">
-          <h2>Zgjidhja jonë 🔥</h2>
-
+          <h2>{t("combo.solutionTitle")}</h2>
           <div className="solution-grid fade-up1">
-            <div className="solution-card" style={{ transitionDelay: `0.2s` }}>
-              <Globe />
-              <h3>Website Premium</h3>
-              <p>Design modern i fokusuar në shitje</p>
-            </div>
-
-            <div className="solution-card" style={{ transitionDelay: `0.3s` }}>
-              <Bot />
-              <h3>AI Chatbot</h3>
-              <p>Automatizon komunikimin 24/7</p>
-            </div>
-
-            <div className="solution-card" style={{ transitionDelay: `0.4s` }}>
-              <TrendingUp />
-              <h3>Rritje Konvertimesh</h3>
-              <p>System që kthen vizitorët në klientë</p>
-            </div>
+            {solutions.map((item, index) => (
+              <div
+                className="solution-card"
+                key={index}
+                style={{ transitionDelay: `${0.2 + index * 0.1}s` }}
+              >
+                {solutionIcons[index]}
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* FEATURES */}
         <div className="combo-features">
-          <h2>Çfarë përfshin paketa</h2>
-
+          <h2>{t("combo.featuresTitle")}</h2>
           <div className="features-grid fade-up1">
             <div style={{ transitionDelay: "0.2s" }}>
-              <h4>Website</h4>
+              <h4>{t("combo.websiteTitle")}</h4>
               <ul>
-                <li>Landing page / multi-page</li>
-                <li>Responsive design</li>
-                <li>SEO bazë</li>
-                <li>Form kontaktesh</li>
+                {websiteFeatures.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
-
             <div style={{ transitionDelay: "0.2s" }}>
-              <h4>Chatbot</h4>
+              <h4>{t("combo.chatbotTitle")}</h4>
               <ul>
-                <li>FAQ + Lead capture</li>
-                <li>Sales automation</li>
-                <li>Përgjigje 24/7</li>
-                <li>WhatsApp / Instagram integrim</li>
+                {chatbotFeatures.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
 
         {/* PROCESS */}
-        <div className="combo-process ">
-          <h2>Si funksionon?</h2>
-
+        <div className="combo-process">
+          <h2>{t("combo.processTitle")}</h2>
           <div className="process-steps fade-up1">
-            <div style={{ transitionDelay: "0.2s" }}>1. Konsultim</div>
-            <div style={{ transitionDelay: "0.3s" }}>2. Strategji</div>
-            <div style={{ transitionDelay: "0.4s" }}>3. Zhvillim</div>
-            <div style={{ transitionDelay: "0.5s" }}>4. Launch 🚀</div>
+            {processSteps.map((step, index) => (
+              <div
+                key={index}
+                style={{ transitionDelay: `${0.2 + index * 0.1}s` }}
+              >
+                {step}
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* CTA FINAL */}
+        {/* CTA */}
         <section className="website-service-cta">
           <div className="website-service-container">
             <div className="website-service-cta-card">
               <h2>
-                Gati për një website që{" "}
-                <span>e ngre biznesin tuaj në nivel tjetër?</span>
+                {t("combo.ctaTitle")} <span>{t("combo.ctaTitleSpan")}</span>
               </h2>
-
-              <p>
-                Na tregoni çfarë lloj faqeje ju duhet dhe ne ju kthejmë një
-                zgjidhje të qartë, moderne dhe të personalizuar për biznesin
-                tuaj.
-              </p>
-
+              <p>{t("combo.ctaText")}</p>
               <div className="website-service-cta-actions">
                 <Link
                   to="/contact"
                   className="website-service-btn website-service-btn-primary"
                 >
-                  <span>Kërko Ofertë</span>
+                  <span>{t("combo.ctaBtnOffer")}</span>
                   <ArrowRight size={18} />
                 </Link>
-
                 <Link
                   to="/contact"
                   className="website-service-btn website-service-btn-secondary"
                 >
-                  Shkruaj Tani
+                  {t("combo.ctaBtnContact")}
                 </Link>
               </div>
             </div>

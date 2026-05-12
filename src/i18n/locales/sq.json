@@ -1,0 +1,577 @@
+{
+  "navbar": {
+    "home": "Kryefaqja",
+    "services": "Shërbime",
+    "packages": "Paketa",
+    "portfolio": "Portfolio",
+    "about": "Rreth Nesh",
+    "getStarted": "Fillo Tani"
+  },
+  "footer": {
+    "tagline": "Automatizim inteligjent dhe dizajn premium për biznese moderne.",
+    "services": "Shërbimet",
+    "company": "Kompania",
+    "contactTitle": "Na kontaktoni",
+    "followTitle": "Na ndiqni",
+    "followText": "Qëndroni të lidhur me ne dhe shikoni projektet dhe risitë tona.",
+    "copyright": "© 2026 BotEngineStudio. Të gjitha të drejtat e rezervuara.",
+    "links": {
+      "aiChatbot": "AI Chatbot",
+      "webDev": "Web Development",
+      "combo": "Premium Combo",
+      "portfolio": "Portfolio",
+      "contact": "Kontakt"
+    }
+  },
+  "hero": {
+    "title": "Automatizo biznesin tënd",
+    "titleSpan": "& rrit shitjet",
+    "subtitle": "Chatbot inteligjent + Website modern që përgjigjet në sekonda dhe konverton vizitorët në klientë",
+    "btnPackages": "Shiko Paketat",
+    "btnDemo": "Merr Demo",
+    "feature1": "24/7 Automatik",
+    "feature2": "Setup në 48h",
+    "feature3": "ROI i lartë"
+  },
+  "problems": {
+    "label": "PROBLEMET",
+    "title": "A po i",
+    "titleSpan": "humbni klientët?",
+    "items": [
+      {
+        "title": "Përgjigje të ngadalta",
+        "text": "Klientët presin orë të tëra për përgjigje. 78% e blerësve blejnë nga biznesi i parë që përgjigjet."
+      },
+      {
+        "title": "Lead-e të humbura",
+        "text": "Pa automatizim, vizitorët largohen pa lënë kontakt. Mundësitë humbasin çdo ditë."
+      },
+      {
+        "title": "Website joprofesional",
+        "text": "Një website i dobët ul besueshmërinë. 94% e përshtypjeve të para janë bazuar në dizajn."
+      }
+    ]
+  },
+  "services": {
+    "label": "SHËRBIMET",
+    "title": "Zgjidhje të",
+    "titleSpan": "plota dixhitale",
+    "badge": "Popular",
+    "btnMore": "Shiko më shumë →",
+    "items": [
+      {
+        "title": "AI Chatbot Automation",
+        "text": "Chatbot inteligjent 24/7 që kualifikon lead-e, përgjigjet pyetjeve dhe rrit shitjet automatikisht.",
+        "features": [
+          "Përgjigje në sekonda",
+          "Integrim me WhatsApp/Instagram",
+          "Analitikë të detajuara"
+        ]
+      },
+      {
+        "title": "Website Development",
+        "text": "Website modern, i shpejtë dhe i optimizuar për konvertim që përfaqëson biznesin tuaj profesionalisht.",
+        "features": ["Responsive design", "SEO optimizim", "Shpejtësi e lartë"]
+      },
+      {
+        "title": "Website + Chatbot Combo",
+        "text": "Paketa e plotë: website premium + chatbot AI për një prezencë dixhitale komplet dhe konvertim maksimal.",
+        "features": [
+          "Gjithçka në një paketë",
+          "Çmim i reduktuar",
+          "Suport prioritar"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "label": "PROCESI",
+    "title": "Si",
+    "titleSpan": "funksionon?",
+    "steps": [
+      { "title": "Konsultim", "text": "Diskutojmë nevojat e biznesit tuaj" },
+      { "title": "Zgjedhja e Paketës", "text": "Zgjidhni paketën e duhur" },
+      { "title": "Zhvillimi", "text": "Krijojmë zgjidhjen tuaj" },
+      { "title": "Implementimi", "text": "Lansojmë dhe monitorojmë" }
+    ]
+  },
+  "pricing": {
+    "label": "ÇMIMET",
+    "title": "Zgjidhni",
+    "titleSpan": "paketën tuaj",
+    "badge": "Rekomanduar",
+    "plans": [
+      {
+        "label": "STARTER",
+        "title": "Chatbot Starter",
+        "suffix": "/njëherë + €99/muaj",
+        "features": [
+          "Chatbot AI i personalizuar",
+          "Integrim në website",
+          "Raporte mujore",
+          "Suport email"
+        ],
+        "buttonText": "Fillo Tani"
+      },
+      {
+        "label": "PROFESSIONAL",
+        "title": "Website Professional",
+        "suffix": "/njëherë",
+        "features": [
+          "Website modern responsive",
+          "Deri 7 faqe",
+          "SEO bazë",
+          "Hosting 1 vit",
+          "SSL certifikatë"
+        ],
+        "buttonText": "Fillo Tani"
+      },
+      {
+        "label": "PREMIUM",
+        "title": "Premium Combo",
+        "suffix": "/njëherë + €99/muaj",
+        "features": [
+          "Website premium (deri 12 faqe)",
+          "Chatbot AI i avancuar",
+          "WhatsApp + Instagram integrim",
+          "Analitikë të avancuara",
+          "Suport prioritar 24/7",
+          "Hosting + domain falas"
+        ],
+        "buttonText": "Merr Premium"
+      }
+    ]
+  },
+  "portfolio": {
+    "label": "PORTFOLIO",
+    "title": "Projektet",
+    "titleSpan": "tona",
+    "btnView": "Shiko Projektin"
+  },
+  "industries": {
+    "label": "PËR KË",
+    "title": "Zgjidhje për",
+    "titleSpan": "çdo industri",
+    "items": ["Hotele", "E-Commerce", "Klinika", "Restorante", "Biznese Lokale"]
+  },
+  "why": {
+    "label": "PSE NE",
+    "title": "Pse",
+    "titleSpan": "BotEngineStudio?",
+    "items": [
+      {
+        "title": "Shpejtësi",
+        "text": "Dorëzim brenda 48 orëve. Biznesi juaj nuk pret."
+      },
+      {
+        "title": "Automatizim",
+        "text": "AI që punon 24/7 pa pushim dhe pa gabime."
+      },
+      {
+        "title": "Dizajn Premium",
+        "text": "Dizajne unike që ndërtojnë besim dhe profesionalizëm."
+      },
+      {
+        "title": "Konvertim",
+        "text": "Çdo element është optimizuar për të kthyer vizitorët në klientë."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Gati të",
+    "titleSpan": "transformoni",
+    "titleEnd": "biznesin?",
+    "text": "Filloni sot me një konsultim falas. Merrni chatbotin tuaj AI dhe website-in modern brenda 48 orëve.",
+    "btnDemo": "Merr Demo",
+    "btnContact": "Kontakto"
+  },
+  "about": {
+    "label": "RRETH NESH",
+    "title": "Ne ndërtojmë",
+    "titleSpan": "experienca dixhitale",
+    "titleEnd": "që sjellin klientë",
+    "subtitle": "BotEngineStudio nuk është thjesht një agjenci. Ne krijojmë sisteme që automatizojnë, optimizojnë dhe rrisin biznesin tuaj çdo ditë.",
+    "missionTitle": "Misioni ynë",
+    "missionText": "Të ndihmojmë bizneset të rriten më shpejt duke përdorur AI, automatizim dhe dizajn modern që konverton.",
+    "visionTitle": "Vizioni ynë",
+    "visionText": "Të bëhemi standardi i ri për prezencën online të bizneseve moderne në Shqipëri dhe më gjerë.",
+    "storyTitle": "Pse ekziston",
+    "storyTitleSpan": "BotEngineStudio?",
+    "storyText1": "Shumë biznese humbasin klientë çdo ditë për një arsye të thjeshtë: përgjigjen vonë, nuk kanë prezencë profesionale online dhe nuk përdorin automatizim.",
+    "storyText2": "Ne e ndërtuam BotEngineStudio për të zgjidhur këtë problem. Kombinojmë teknologjinë AI me dizajn modern për të krijuar sisteme që punojnë për ju 24/7.",
+    "valuesTitle": "Çfarë na",
+    "valuesTitleSpan": "dallon?",
+    "values": [
+      { "title": "Shpejtësi", "text": "Implementim brenda 48 orëve." },
+      { "title": "Automatizim", "text": "Sisteme që punojnë pa ndërhyrje." },
+      {
+        "title": "Dizajn Premium",
+        "text": "Website që krijon besim dhe konvertim."
+      }
+    ],
+    "ctaTitle": "Gati të punojmë",
+    "ctaTitleSpan": "së bashku?",
+    "ctaBtn": "Fillojmë Tani"
+  },
+  "contact": {
+    "label": "KONTAKT",
+    "title": "Le të flasim për",
+    "titleSpan": "projektin tuaj",
+    "subtitle": "Na shkruani për website, chatbot AI ose një zgjidhje të plotë për biznesin tuaj. Do t'ju kthejmë përgjigje sa më shpejt.",
+    "formTitle": "Na dërgo një mesazh",
+    "formSubtitle": "Plotëso formularin dhe ne do t'ju kontaktojmë për të kuptuar më mirë nevojat e biznesit tuaj.",
+    "firstName": "Emri",
+    "firstNamePlaceholder": "Shkruani emrin tuaj",
+    "lastName": "Mbiemri",
+    "lastNamePlaceholder": "Shkruani mbiemrin tuaj",
+    "email": "Email",
+    "emailPlaceholder": "email@shembull.com",
+    "phone": "Telefoni",
+    "phonePlaceholder": "+355...",
+    "service": "Shërbimi që ju intereson",
+    "servicePlaceholder": "Zgjidhni një opsion",
+    "serviceOptions": [
+      "AI Chatbot",
+      "Website Development",
+      "Website + Chatbot Combo",
+      "Tjetër"
+    ],
+    "message": "Mesazhi",
+    "messagePlaceholder": "Na tregoni pak më shumë për projektin ose biznesin tuaj...",
+    "submitBtn": "Dërgo Mesazhin",
+    "emailLabel": "Email",
+    "phoneLabel": "Telefon",
+    "locationLabel": "Vendndodhja",
+    "location": "Tiranë, Shqipëri",
+    "followTitle": "Na ndiqni",
+    "followText": "Qëndroni të lidhur me ne dhe shikoni projektet dhe risitë tona."
+  },
+  "chatbot": {
+    "label": "CHATBOT SERVICE",
+    "title": "Chatbot AI që",
+    "titleSpan": "përgjigjet, ndihmon dhe konverton",
+    "subtitle": "Një chatbot i personalizuar për biznesin tuaj që punon 24/7, përgjigjet në sekonda dhe kthen vizitorët në klientë pa humbur kohë.",
+    "btnDemo": "Merr Demo",
+    "btnOffer": "Kërko Ofertë",
+    "whatTitle": "Çfarë është chatbot-i ynë?",
+    "whatText": "Chatbot-i ynë është një asistent virtual i trajnuar për biznesin tuaj. Ai përgjigjet automatikisht ndaj pyetjeve, ndihmon klientin të gjejë informacionin e duhur dhe e çon drejt veprimit të dëshiruar: porosi, booking, kontakt ose lead.",
+    "previewStatus": "BotEngine AI · Online",
+    "previewMsg1": "Përshëndetje 👋 Si mund t'ju ndihmoj?",
+    "previewMsg2": "Dua të di çmimet",
+    "previewMsg3": "Sigurisht. Paketat fillojnë nga një setup fillestar dhe mund të personalizohen sipas biznesit tuaj.",
+    "problemsTitle": "Çfarë problemesh",
+    "problemsTitleSpan": "zgjidh?",
+    "problems": [
+      {
+        "title": "Përgjigje të vonuara",
+        "text": "Klientët largohen kur nuk marrin përgjigje menjëherë në DM ose në website."
+      },
+      {
+        "title": "Humbje lead-esh",
+        "text": "Pa automatizim, shumë vizitorë largohen pa lënë kontakt dhe pa bërë hapin tjetër."
+      },
+      {
+        "title": "Përsëritje e pyetjeve",
+        "text": "Biznesi humbet kohë duke iu përgjigjur të njëjtave pyetje çdo ditë."
+      }
+    ],
+    "featuresTitle": "Features që bëjnë",
+    "featuresTitleSpan": "diferencën",
+    "features": [
+      "Përgjigje automatike 24/7",
+      "Lead capture dhe mbledhje kontaktesh",
+      "FAQ të personalizuara sipas biznesit",
+      "Drejtim i klientit drejt porosisë ose booking",
+      "Follow-up automatik",
+      "Tone of voice sipas brand-it tuaj"
+    ],
+    "integrationsTitle": "Integrime me",
+    "integrationsTitleSpan": "kanalet kryesore",
+    "processTitle": "Procesi i",
+    "processTitleSpan": "implementimit",
+    "processSteps": [
+      {
+        "title": "Analizë e biznesit",
+        "text": "Kuptojmë produktin, pyetjet e klientëve dhe objektivin e chatbot-it."
+      },
+      {
+        "title": "Ndërtim & trajnimi",
+        "text": "Krijojmë flow-t, përgjigjet dhe logjikën sipas skenarëve realë të biznesit tuaj."
+      },
+      {
+        "title": "Integrim",
+        "text": "E lidhim chatbot-in me kanalet ku klientët tuaj komunikojnë më shumë."
+      },
+      {
+        "title": "Launch & optimizim",
+        "text": "Publikojmë chatbot-in dhe e përmirësojmë sipas përdorimit real."
+      }
+    ],
+    "ctaTitle": "Gati për një chatbot që",
+    "ctaTitleSpan": "punon për ju 24/7?",
+    "ctaText": "Merrni një demo ose një ofertë të personalizuar sipas biznesit, industrisë dhe kanalit ku doni ta implementoni.",
+    "ctaBtnDemo": "Merr Demo",
+    "ctaBtnOffer": "Kërko Ofertë",
+    "pricingTitle": "Paketat dhe",
+    "pricingTitleSpan": "çmimet e chatbot-it",
+    "pricingBadge": "Më i zgjedhuri",
+    "plans": [
+      {
+        "label": "BASIC",
+        "title": "Fillimi",
+        "subtitle": "Për biznese që duan automatizim bazë",
+        "features": [
+          "FAQ Bot (pyetje të zakonshme)",
+          "Lead Capture Bot (mbledh kontakte)",
+          "Integrim në website",
+          "Setup + testim"
+        ],
+        "buttonText": "Kërko Ofertë"
+      },
+      {
+        "label": "GROWTH",
+        "title": "Shitje + Automatizim",
+        "subtitle": "Për biznese që duan rezultate reale",
+        "features": [
+          "FAQ Bot",
+          "Lead Capture Bot",
+          "Sales Funnel Bot",
+          "Cart Recovery Bot",
+          "Integrim në website + optimizim",
+          "Strukturë për konvertim"
+        ],
+        "buttonText": "Më i zgjedhuri"
+      },
+      {
+        "label": "PRO",
+        "title": "Automatizim i plotë",
+        "subtitle": "Për biznese serioze (hotele, e-commerce, shërbime)",
+        "features": [
+          "Gjithçka nga Growth",
+          "Booking / Reservation Bot",
+          "Follow-up Bot",
+          "Custom flows sipas biznesit",
+          "Integrim multi-channel",
+          "Strategji konvertimi"
+        ],
+        "buttonText": "Kërko Premium"
+      }
+    ]
+  },
+  "websiteService": {
+    "label": "WEBSITE SERVICE",
+    "title": "Website modern që",
+    "titleSpan": "duket mirë dhe konverton",
+    "subtitle": "Krijojmë website profesionale për biznese, hotele, klinika, landing pages dhe e-commerce — me dizajn premium, responsive dhe strukturë të menduar për rezultate.",
+    "btnOffer": "Merr Ofertë",
+    "btnContact": "Kontakto",
+    "typesTitle": "Çfarë lloj",
+    "typesTitleSpan": "website-sh ndërtojmë?",
+    "types": [
+      {
+        "title": "Landing Page",
+        "text": "Faqe e fokusuar për oferta, lead capture dhe konvertim të shpejtë."
+      },
+      {
+        "title": "Website Biznesi",
+        "text": "Prezencë profesionale online për kompani, shërbime dhe brand-e lokale."
+      },
+      {
+        "title": "Website për Hotel",
+        "text": "Prezantim elegant i dhomave, shërbimeve dhe mundësi për rezervime."
+      },
+      {
+        "title": "Website për Klinikë",
+        "text": "Faqe moderne për besim, informim dhe kontakt të shpejtë me pacientët."
+      },
+      {
+        "title": "E-Commerce",
+        "text": "Dyqan online me strukturë të qartë për produkte, oferta dhe shitje."
+      }
+    ],
+    "featuresTitle": "Çfarë",
+    "featuresTitleSpan": "përfshin?",
+    "features": [
+      "Dizajn modern dhe premium.",
+      "Responsive në telefon, tablet dhe desktop.",
+      "SEO bazë për strukturë dhe përmbajtje.",
+      "Form kontaktesh të personalizuar.",
+      "Buton WhatsApp për kontakt të shpejtë.",
+      "Domain & hosting falas per 1 vit."
+    ],
+    "benefitsTitle": "Pse ka rëndësi një",
+    "benefitsTitleSpan": "website i ndërtuar si duhet?",
+    "benefits": [
+      {
+        "title": "Dizajn që krijon besim",
+        "text": "Ndërtojmë website që duken profesionalë dhe i japin biznesit tuaj prezencë serioze."
+      },
+      {
+        "title": "Responsive në çdo pajisje",
+        "text": "Faqja juaj funksionon dhe duket bukur në desktop, tablet dhe mobile."
+      },
+      {
+        "title": "SEO bazë e integruar",
+        "text": "Strukturë e optimizuar që ndihmon Google ta kuptojë dhe indeksojë faqen."
+      },
+      {
+        "title": "Forma & integrime",
+        "text": "Mund të shtojmë contact form, WhatsApp dhe chatbot për më shumë lead-e."
+      }
+    ],
+    "processTitle": "Si funksionon",
+    "processTitleSpan": "procesi?",
+    "processSteps": [
+      {
+        "title": "Konsultim & strategji",
+        "text": "Diskutojmë biznesin, objektivin dhe llojin e faqes që ju nevojitet."
+      },
+      {
+        "title": "Dizajn & strukturë",
+        "text": "Krijojmë layout-in, hierarkinë e përmbajtjes dhe eksperiencën e përdoruesit."
+      },
+      {
+        "title": "Zhvillim",
+        "text": "Ndërtojmë faqen me fokus te shpejtësia, pastërtia dhe konvertimi."
+      },
+      {
+        "title": "Launch",
+        "text": "Faqja publikohet dhe bëhet gati për klientët tuaj realë."
+      }
+    ],
+    "ctaTitle": "Gati për një website që",
+    "ctaTitleSpan": "e ngre biznesin tuaj në nivel tjetër?",
+    "ctaText": "Na tregoni çfarë lloj faqeje ju duhet dhe ne ju kthejmë një zgjidhje të qartë, moderne dhe të personalizuar për biznesin tuaj.",
+    "ctaBtnOffer": "Kërko Ofertë",
+    "ctaBtnContact": "Shkruaj Tani",
+    "pricingTitle": "Paketa dhe",
+    "pricingTitleSpan": "çmime fillestare",
+    "pricingBadge": "Më i zgjedhuri",
+    "plans": [
+      {
+        "label": "STARTER",
+        "title": "Landing Page",
+        "suffix": "nga",
+        "description": "Për oferta, lead generation dhe prezantim të fokusuar të një shërbimi ose produkti.",
+        "features": [
+          "1 faqe (Landing Page)",
+          "Dizajn modern & i pastër",
+          "Responsive (mobile/tablet)",
+          "CTA për konvertim (butona, seksione)",
+          "Form kontakti",
+          "Integrim WhatsApp",
+          "SEO bazë (tituj, strukturë)",
+          "Ngarkim i shpejtë"
+        ],
+        "buttonText": "Kërko Ofertë"
+      },
+      {
+        "label": "BUSINESS",
+        "title": "Business Website",
+        "suffix": "nga",
+        "description": "Për biznese që duan një prezencë profesionale dhe konvertuese online.",
+        "features": [
+          "Deri në 5 faqe (Home, About, Services, Contact...)",
+          "Dizajn premium dhe profesional",
+          "Responsive në të gjitha pajisjet",
+          "Strukturë për konvertim (UX/UI)",
+          "Form kontakti i avancuar",
+          "Integrim WhatsApp + CTA buttons",
+          "SEO bazë (strukturë + meta)",
+          "Optimizim performance",
+          "Animacione moderne (smooth UI)"
+        ],
+        "buttonText": "Më i zgjedhuri"
+      },
+      {
+        "label": "PREMIUM",
+        "title": "Premium Website",
+        "suffix": "nga",
+        "description": "Për hotele, klinika dhe biznese që duan një prezencë të fortë dhe unike.",
+        "features": [
+          "Deri në 10+ faqe",
+          "Dizajn unik (jo template)",
+          "UX/UI i avancuar për konvertim",
+          "Strukturë e personalizuar sipas biznesit",
+          "Dashboard admin (panel menaxhimi)",
+          "Menaxhim përmbajtje (tekst, foto, seksione)",
+          "Forma të avancuara (lead capture)",
+          "Ruajtje automatike e lead-eve",
+          "Domain + Hosting 1 vit/Free",
+          "SEO bazë + strukturë për Google",
+          "Optimizim performance i avancuar",
+          "Animacione premium & micro-interactions",
+          "Suport prioritar"
+        ],
+        "buttonText": "Kërko Premium"
+      }
+    ]
+  },
+  "combo": {
+    "title": "Website +",
+    "titleSpan": "AI Chatbot",
+    "titleEnd": "në një paketë",
+    "subtitle": "Krijojmë një prezencë dixhitale që nuk është vetëm e bukur, por konverton vizitorët në klientë automatikisht.",
+    "btnDemo": "Merr Demo",
+    "btnPackages": "Shiko Paketat",
+    "problemTitle": "Pse bizneset humbasin klientë?",
+    "problemItems": [
+      "Website pa konvertim ❌",
+      "Përgjigje të vonuara ❌",
+      "Lead-e të humbura ❌"
+    ],
+    "solutionTitle": "Zgjidhja jonë 🔥",
+    "solutions": [
+      {
+        "title": "Website Premium",
+        "text": "Design modern i fokusuar në shitje"
+      },
+      { "title": "AI Chatbot", "text": "Automatizon komunikimin 24/7" },
+      {
+        "title": "Rritje Konvertimesh",
+        "text": "System që kthen vizitorët në klientë"
+      }
+    ],
+    "featuresTitle": "Çfarë përfshin paketa",
+    "websiteTitle": "Website",
+    "websiteFeatures": [
+      "Landing page / multi-page",
+      "Responsive design",
+      "SEO bazë",
+      "Form kontaktesh"
+    ],
+    "chatbotTitle": "Chatbot",
+    "chatbotFeatures": [
+      "FAQ + Lead capture",
+      "Sales automation",
+      "Përgjigje 24/7",
+      "WhatsApp / Instagram integrim"
+    ],
+    "processTitle": "Si funksionon?",
+    "processSteps": [
+      "1. Konsultim",
+      "2. Strategji",
+      "3. Zhvillim",
+      "4. Launch 🚀"
+    ],
+    "ctaTitle": "Gati për një website që",
+    "ctaTitleSpan": "e ngre biznesin tuaj në nivel tjetër?",
+    "ctaText": "Na tregoni çfarë lloj faqeje ju duhet dhe ne ju kthejmë një zgjidhje të qartë, moderne dhe të personalizuar për biznesin tuaj.",
+    "ctaBtnOffer": "Kërko Ofertë",
+    "ctaBtnContact": "Shkruaj Tani"
+  },
+  "projectDetail": {
+    "notFound": "Projekti nuk u gjet.",
+    "backBtn": "← Kthehu",
+    "backPortfolio": "Kthehu te Portfolio",
+    "statusDone": "✓ Kompletuar",
+    "statusWip": "⏳ Në Progres",
+    "sectionAbout": "RRETH PROJEKTIT",
+    "sectionGallery": "PAMJA E PROJEKTIT",
+    "sectionFeatures": "FUNKSIONALITETET",
+    "sectionStack": "TEKNOLOGJITË",
+    "btnLive": "Shiko Live",
+    "btnSimilar": "Kërko një projekt të ngjashëm",
+    "btnOther": "← Projekte të tjera"
+  }
+}

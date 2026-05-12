@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
 import "../styles/Navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const closeMenu = () => setMenuOpen(false);
-
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -25,32 +27,28 @@ function Navbar() {
               location.pathname === "/" ? "active" : ""
             }`}
           >
-            Home
+            {t("navbar.home")}
           </Link>
-
           <Link to="/#services" className="navbar-link">
-            Services
+            {t("navbar.services")}
           </Link>
-
           <Link to="/#pricing" className="navbar-link">
-            Packages
+            {t("navbar.packages")}
           </Link>
-
           <Link to="/#portfolio" className="navbar-link">
-            Portfolio
+            {t("navbar.portfolio")}
           </Link>
-
           <Link
             to="/about"
             className={`navbar-link ${isActive("/about") ? "active" : ""}`}
           >
-            About
+            {t("navbar.about")}
           </Link>
         </nav>
 
         <div className="navbar-actions desktop-actions">
           <Link to="/contact" className="navbar-btn">
-            Get Started
+            {t("navbar.getStarted")}
           </Link>
         </div>
 
@@ -67,31 +65,26 @@ function Navbar() {
       <div className={`mobile-nav ${menuOpen ? "open" : ""}`}>
         <nav className="mobile-nav-menu">
           <Link to="/#home" className="mobile-nav-link" onClick={closeMenu}>
-            Home
+            {t("navbar.home")}
           </Link>
-
           <Link to="/#services" className="mobile-nav-link" onClick={closeMenu}>
-            Services
+            {t("navbar.services")}
           </Link>
-
           <Link to="/#pricing" className="mobile-nav-link" onClick={closeMenu}>
-            Packages
+            {t("navbar.packages")}
           </Link>
-
           <Link
             to="/#portfolio"
             className="mobile-nav-link"
             onClick={closeMenu}
           >
-            Portfolio
+            {t("navbar.portfolio")}
           </Link>
-
           <Link to="/about" className="mobile-nav-link" onClick={closeMenu}>
-            About
+            {t("navbar.about")}
           </Link>
-
           <Link to="/contact" className="mobile-nav-btn" onClick={closeMenu}>
-            Get Started
+            {t("navbar.getStarted")}
           </Link>
         </nav>
       </div>

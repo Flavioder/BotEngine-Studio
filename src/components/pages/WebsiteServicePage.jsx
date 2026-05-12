@@ -17,170 +17,103 @@ import {
   Rocket,
   ArrowRight,
 } from "lucide-react";
-
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-const websiteTypes = [
-  {
-    title: "Landing Page",
-    text: "Faqe e fokusuar për oferta, lead capture dhe konvertim të shpejtë.",
-    icon: <LayoutDashboard size={22} />,
-    delay: "0.2s",
-  },
-  {
-    title: "Website Biznesi",
-    text: "Prezencë profesionale online për kompani, shërbime dhe brand-e lokale.",
-    icon: <Briefcase size={22} />,
-    delay: "0.3s",
-  },
-  {
-    title: "Website për Hotel",
-    text: "Prezantim elegant i dhomave, shërbimeve dhe mundësi për rezervime.",
-    icon: <Hotel size={22} />,
-    delay: "0.4s",
-  },
-  {
-    title: "Website për Klinikë",
-    text: "Faqe moderne për besim, informim dhe kontakt të shpejtë me pacientët.",
-    icon: <Stethoscope size={22} />,
-    delay: "0.5s",
-  },
-  {
-    title: "E-Commerce",
-    text: "Dyqan online me strukturë të qartë për produkte, oferta dhe shitje.",
-    icon: <ShoppingCart size={22} />,
-    delay: "0.6s",
-  },
+const typeIcons = [
+  <LayoutDashboard size={22} />,
+  <Briefcase size={22} />,
+  <Hotel size={22} />,
+  <Stethoscope size={22} />,
+  <ShoppingCart size={22} />,
 ];
+const typeDelays = ["0.2s", "0.3s", "0.4s", "0.5s", "0.6s"];
 
-const features = [
-  "Dizajn modern dhe premium.",
-  "Responsive në telefon, tablet dhe desktop.",
-  "SEO bazë për strukturë dhe përmbajtje.",
-  "Form kontaktesh të personalizuar.",
-  "Buton WhatsApp për kontakt të shpejtë.",
-  "Domain & hosting falas per 1 vit.",
+const benefitIcons = [
+  <Palette size={22} />,
+  <Smartphone size={22} />,
+  <Search size={22} />,
+  <MessageSquareText size={22} />,
 ];
+const benefitTypes = ["cyan", "purple", "cyan", "purple"];
+const benefitDelays = ["0.2s", "0.3s", "0.4s", "0.5s"];
 
-const benefits = [
-  {
-    title: "Dizajn që krijon besim",
-    text: "Ndërtojmë website që duken profesionalë dhe i japin biznesit tuaj prezencë serioze.",
-    icon: <Palette size={22} />,
-    type: "cyan",
-    delay: "0.2s",
-  },
-  {
-    title: "Responsive në çdo pajisje",
-    text: "Faqja juaj funksionon dhe duket bukur në desktop, tablet dhe mobile.",
-    icon: <Smartphone size={22} />,
-    type: "purple",
-    delay: "0.3s",
-  },
-  {
-    title: "SEO bazë e integruar",
-    text: "Strukturë e optimizuar që ndihmon Google ta kuptojë dhe indeksojë faqen.",
-    icon: <Search size={22} />,
-    type: "cyan",
-    delay: "0.4s",
-  },
-  {
-    title: "Forma & integrime",
-    text: "Mund të shtojmë contact form, WhatsApp dhe chatbot për më shumë lead-e.",
-    icon: <MessageSquareText size={22} />,
-    type: "purple",
-    delay: "0.5s",
-  },
+const processIcons = [
+  <Workflow size={22} />,
+  <Palette size={22} />,
+  <Code2 size={22} />,
+  <Rocket size={22} />,
 ];
-
-const processSteps = [
-  {
-    title: "Konsultim & strategji",
-    text: "Diskutojmë biznesin, objektivin dhe llojin e faqes që ju nevojitet.",
-    icon: <Workflow size={22} />,
-    delay: "0.2s",
-  },
-  {
-    title: "Dizajn & strukturë",
-    text: "Krijojmë layout-in, hierarkinë e përmbajtjes dhe eksperiencën e përdoruesit.",
-    icon: <Palette size={22} />,
-    delay: "0.3s",
-  },
-  {
-    title: "Zhvillim",
-    text: "Ndërtojmë faqen me fokus te shpejtësia, pastërtia dhe konvertimi.",
-    icon: <Code2 size={22} />,
-    delay: "0.4s",
-  },
-  {
-    title: "Launch",
-    text: "Faqja publikohet dhe bëhet gati për klientët tuaj realë.",
-    icon: <Rocket size={22} />,
-    delay: "0.5s",
-  },
-];
+const processDelays = ["0.2s", "0.3s", "0.4s", "0.5s"];
 
 function WebsiteServicePage() {
+  const { t } = useTranslation();
+  const types = t("websiteService.types", { returnObjects: true });
+  const features = t("websiteService.features", { returnObjects: true });
+  const benefits = t("websiteService.benefits", { returnObjects: true });
+  const processSteps = t("websiteService.processSteps", {
+    returnObjects: true,
+  });
+
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("show");
       });
     });
-
     elements.forEach((el) => observer.observe(el));
   }, []);
+
   return (
     <main className="website-service-page">
+      {/* HERO */}
       <section className="website-service-hero">
         <div className="website-service-container">
-          <span className="website-service-label">WEBSITE SERVICE</span>
-
+          <span className="website-service-label">
+            {t("websiteService.label")}
+          </span>
           <h1 className="website-service-title">
-            Website modern që <span>duket mirë dhe konverton</span>
+            {t("websiteService.title")}{" "}
+            <span>{t("websiteService.titleSpan")}</span>
           </h1>
-
           <p className="website-service-subtitle">
-            Krijojmë website profesionale për biznese, hotele, klinika, landing
-            pages dhe e-commerce — me dizajn premium, responsive dhe strukturë
-            të menduar për rezultate.
+            {t("websiteService.subtitle")}
           </p>
-
           <div className="website-service-hero-actions">
             <Link
               to="/contact"
               className="website-service-btn website-service-btn-primary"
             >
-              Merr Ofertë
+              {t("websiteService.btnOffer")}
             </Link>
             <Link
               to="/contact"
               className="website-service-btn website-service-btn-secondary"
             >
-              Kontakto
+              {t("websiteService.btnContact")}
             </Link>
           </div>
         </div>
       </section>
 
+      {/* TYPES */}
       <section className="website-service-types">
         <div className="website-service-container">
           <h2 className="website-service-section-title">
-            Çfarë lloj <span>website-sh ndërtojmë?</span>
+            {t("websiteService.typesTitle")}{" "}
+            <span>{t("websiteService.typesTitleSpan")}</span>
           </h2>
-
           <div className="website-service-types-grid">
-            {websiteTypes.map((item, index) => (
+            {types.map((item, index) => (
               <article
                 className="website-service-card fade-up1"
                 key={index}
-                style={{ transitionDelay: `${item.delay}` }}
+                style={{ transitionDelay: typeDelays[index] }}
               >
-                <div className="website-service-icon cyan">{item.icon}</div>
+                <div className="website-service-icon cyan">
+                  {typeIcons[index]}
+                </div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </article>
@@ -191,12 +124,13 @@ function WebsiteServicePage() {
 
       <WebsiteServicePricingSection />
 
+      {/* FEATURES */}
       <section className="website-service-features">
         <div className="website-service-container">
           <h2 className="website-service-section-title">
-            Çfarë <span>përfshin?</span>
+            {t("websiteService.featuresTitle")}{" "}
+            <span>{t("websiteService.featuresTitleSpan")}</span>
           </h2>
-
           <div className="website-service-features-card fade-in">
             <div className="website-service-features-grid">
               {features.map((feature, index) => (
@@ -212,21 +146,22 @@ function WebsiteServicePage() {
         </div>
       </section>
 
+      {/* BENEFITS */}
       <section className="website-service-benefits">
         <div className="website-service-container">
           <h2 className="website-service-section-title">
-            Pse ka rëndësi një <span>website i ndërtuar si duhet?</span>
+            {t("websiteService.benefitsTitle")}{" "}
+            <span>{t("websiteService.benefitsTitleSpan")}</span>
           </h2>
-
           <div className="website-service-benefits-grid">
             {benefits.map((item, index) => (
               <article
                 className="website-service-card fade-up1"
                 key={index}
-                style={{ transitionDelay: `${item.delay}` }}
+                style={{ transitionDelay: benefitDelays[index] }}
               >
-                <div className={`website-service-icon ${item.type}`}>
-                  {item.icon}
+                <div className={`website-service-icon ${benefitTypes[index]}`}>
+                  {benefitIcons[index]}
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
@@ -236,24 +171,26 @@ function WebsiteServicePage() {
         </div>
       </section>
 
+      {/* PROCESS */}
       <section className="website-service-process">
         <div className="website-service-container">
           <h2 className="website-service-section-title">
-            Si funksionon <span>procesi?</span>
+            {t("websiteService.processTitle")}{" "}
+            <span>{t("websiteService.processTitleSpan")}</span>
           </h2>
-
           <div className="website-service-process-grid">
             {processSteps.map((step, index) => (
               <article
                 className="website-service-process-card fade-up1"
                 key={index}
-                style={{ transitionDelay: `${step.delay}` }}
+                style={{ transitionDelay: processDelays[index] }}
               >
                 <div className="website-service-process-number">
                   0{index + 1}
                 </div>
-
-                <div className="website-service-icon purple">{step.icon}</div>
+                <div className="website-service-icon purple">
+                  {processIcons[index]}
+                </div>
                 <h3>{step.title}</h3>
                 <p>{step.text}</p>
               </article>
@@ -262,33 +199,28 @@ function WebsiteServicePage() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="website-service-cta">
         <div className="website-service-container">
           <div className="website-service-cta-card">
             <h2>
-              Gati për një website që{" "}
-              <span>e ngre biznesin tuaj në nivel tjetër?</span>
+              {t("websiteService.ctaTitle")}{" "}
+              <span>{t("websiteService.ctaTitleSpan")}</span>
             </h2>
-
-            <p>
-              Na tregoni çfarë lloj faqeje ju duhet dhe ne ju kthejmë një
-              zgjidhje të qartë, moderne dhe të personalizuar për biznesin tuaj.
-            </p>
-
+            <p>{t("websiteService.ctaText")}</p>
             <div className="website-service-cta-actions">
               <Link
                 to="/contact"
                 className="website-service-btn website-service-btn-primary"
               >
-                <span>Kërko Ofertë</span>
+                <span>{t("websiteService.ctaBtnOffer")}</span>
                 <ArrowRight size={18} />
               </Link>
-
               <Link
                 to="/contact"
                 className="website-service-btn website-service-btn-secondary"
               >
-                Shkruaj Tani
+                {t("websiteService.ctaBtnContact")}
               </Link>
             </div>
           </div>

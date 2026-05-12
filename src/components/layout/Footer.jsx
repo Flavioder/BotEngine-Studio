@@ -1,45 +1,56 @@
 import "../styles/Footer.css";
 import { Mail, Phone, Bot } from "lucide-react";
-import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-grid">
+          {/* BRAND */}
           <div className="footer-brand">
             <div className="footer-brand-top">
               <div className="footer-logo-icon">
                 <Bot size={18} strokeWidth={2.2} />
               </div>
+
               <h3 className="footer-logo-text">
                 Bot<span>Engine</span>Studio
               </h3>
             </div>
 
-            <p>
-              Automatizim inteligjent dhe dizajn premium
-              <br />
-              për biznese moderne.
-            </p>
+            <p>{t("footer.tagline")}</p>
           </div>
 
+          {/* SERVICES */}
           <div className="footer-links">
-            <h4>Shërbimet</h4>
-            <Link to="/chatbot-service">AI Chatbot</Link>
-            <Link to="/website-service">Web Development</Link>
-            <Link to="/combo-service">Premium Combo</Link>
+            <h4>{t("footer.services")}</h4>
+
+            <Link to="/chatbot-service">{t("footer.links.aiChatbot")}</Link>
+
+            <Link to="/website-service">{t("footer.links.webDev")}</Link>
+
+            <Link to="/combo-service">{t("footer.links.combo")}</Link>
           </div>
 
+          {/* COMPANY */}
           <div className="footer-links">
-            <h4>Kompania</h4>
-            <a href="/#portfolio">Portfolio</a>
-            <Link to="/contact">Kontakt</Link>
+            <h4>{t("footer.company")}</h4>
+
+            <a href="/#portfolio">{t("footer.links.portfolio")}</a>
+
+            <Link to="/contact">{t("footer.links.contact")}</Link>
           </div>
 
+          {/* CONTACT */}
           <div className="footer-contact">
-            <h4>Na kontaktoni</h4>
+            <h4>{t("footer.contactTitle")}</h4>
 
+            {/* EMAIL */}
             <a
               href="https://mail.google.com/mail/?view=cm&to=botenginestudio@gmail.com&su=Kërkesë%20për%20Shërbim"
               target="_blank"
@@ -50,12 +61,17 @@ function Footer() {
               <span>botenginestudio@gmail.com</span>
             </a>
 
+            {/* PHONE */}
             <a href="tel:+355694471238" className="footer-contact-item">
               <Phone size={17} />
               <span>+355 69 447 1238</span>
             </a>
+
+            {/* INSTAGRAM */}
             <a
               href="https://www.instagram.com/botenginestudio?igsh=MTZuYXU4aHZ1aWlnZw=="
+              target="_blank"
+              rel="noopener noreferrer"
               className="footer-contact-item"
             >
               <FaInstagram size={17} />
@@ -66,8 +82,9 @@ function Footer() {
 
         <div className="footer-divider"></div>
 
+        {/* BOTTOM */}
         <div className="footer-bottom">
-          <p>© 2026 BotEngineStudio. Të gjitha të drejtat e rezervuara.</p>
+          <p>{t("footer.copyright")}</p>
         </div>
       </div>
     </footer>

@@ -1,0 +1,592 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Servizi",
+    "packages": "Pacchetti",
+    "portfolio": "Portfolio",
+    "about": "Chi Siamo",
+    "getStarted": "Inizia Ora"
+  },
+  "footer": {
+    "tagline": "Automazione intelligente e design premium per le aziende moderne.",
+    "services": "Servizi",
+    "company": "Azienda",
+    "contactTitle": "Contattaci",
+    "followTitle": "Seguici",
+    "followText": "Rimani in contatto con noi e scopri i nostri ultimi progetti e novità.",
+    "copyright": "© 2026 BotEngineStudio. Tutti i diritti riservati.",
+    "links": {
+      "aiChatbot": "AI Chatbot",
+      "webDev": "Sviluppo Web",
+      "combo": "Combo Premium",
+      "portfolio": "Portfolio",
+      "contact": "Contatto"
+    }
+  },
+  "hero": {
+    "title": "Automatizza la tua azienda",
+    "titleSpan": "& aumenta le vendite",
+    "subtitle": "Chatbot intelligente + Sito web moderno che risponde in secondi e converte i visitatori in clienti",
+    "btnPackages": "Vedi Pacchetti",
+    "btnDemo": "Richiedi Demo",
+    "feature1": "Automatico 24/7",
+    "feature2": "Setup in 48h",
+    "feature3": "ROI elevato"
+  },
+  "problems": {
+    "label": "PROBLEMI",
+    "title": "Stai",
+    "titleSpan": "perdendo clienti?",
+    "items": [
+      {
+        "title": "Risposte lente",
+        "text": "I clienti aspettano ore per una risposta. Il 78% degli acquirenti compra dalla prima azienda che risponde."
+      },
+      {
+        "title": "Lead persi",
+        "text": "Senza automazione, i visitatori se ne vanno senza lasciare un contatto. Le opportunità si perdono ogni giorno."
+      },
+      {
+        "title": "Sito web non professionale",
+        "text": "Un sito web scadente riduce la credibilità. Il 94% delle prime impressioni si basa sul design."
+      }
+    ]
+  },
+  "services": {
+    "label": "SERVIZI",
+    "title": "Soluzioni digitali",
+    "titleSpan": "complete",
+    "badge": "Popolare",
+    "btnMore": "Scopri di più →",
+    "items": [
+      {
+        "title": "AI Chatbot Automation",
+        "text": "Chatbot intelligente 24/7 che qualifica i lead, risponde alle domande e aumenta le vendite automaticamente.",
+        "features": [
+          "Risposte istantanee",
+          "Integrazione WhatsApp/Instagram",
+          "Analisi dettagliate"
+        ]
+      },
+      {
+        "title": "Sviluppo Sito Web",
+        "text": "Sito web moderno, veloce e ottimizzato per le conversioni che rappresenta la tua azienda professionalmente.",
+        "features": ["Design responsive", "Ottimizzazione SEO", "Alta velocità"]
+      },
+      {
+        "title": "Website + Chatbot Combo",
+        "text": "Il pacchetto completo: sito web premium + chatbot AI per una presenza digitale completa e massima conversione.",
+        "features": [
+          "Tutto in un pacchetto",
+          "Prezzo ridotto",
+          "Supporto prioritario"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "label": "PROCESSO",
+    "title": "Come",
+    "titleSpan": "funziona?",
+    "steps": [
+      {
+        "title": "Consulenza",
+        "text": "Discutiamo le esigenze della tua azienda"
+      },
+      {
+        "title": "Scelta del Pacchetto",
+        "text": "Scegli il pacchetto giusto per te"
+      },
+      { "title": "Sviluppo", "text": "Creiamo la tua soluzione" },
+      { "title": "Lancio", "text": "Lanciamo e monitoriamo" }
+    ]
+  },
+  "pricing": {
+    "label": "PREZZI",
+    "title": "Scegli",
+    "titleSpan": "il tuo pacchetto",
+    "badge": "Consigliato",
+    "plans": [
+      {
+        "label": "STARTER",
+        "title": "Chatbot Starter",
+        "suffix": "/una tantum + €99/mese",
+        "features": [
+          "Chatbot AI personalizzato",
+          "Integrazione sito web",
+          "Report mensili",
+          "Supporto email"
+        ],
+        "buttonText": "Inizia Ora"
+      },
+      {
+        "label": "PROFESSIONAL",
+        "title": "Website Professional",
+        "suffix": "/una tantum",
+        "features": [
+          "Sito web moderno responsive",
+          "Fino a 7 pagine",
+          "SEO base",
+          "Hosting 1 anno",
+          "Certificato SSL"
+        ],
+        "buttonText": "Inizia Ora"
+      },
+      {
+        "label": "PREMIUM",
+        "title": "Premium Combo",
+        "suffix": "/una tantum + €99/mese",
+        "features": [
+          "Sito web premium (fino a 12 pagine)",
+          "Chatbot AI avanzato",
+          "Integrazione WhatsApp + Instagram",
+          "Analisi avanzate",
+          "Supporto prioritario 24/7",
+          "Hosting + dominio gratuito"
+        ],
+        "buttonText": "Ottieni Premium"
+      }
+    ]
+  },
+  "portfolio": {
+    "label": "PORTFOLIO",
+    "title": "I nostri",
+    "titleSpan": "Progetti",
+    "btnView": "Vedi Progetto"
+  },
+  "industries": {
+    "label": "PER CHI",
+    "title": "Soluzioni per",
+    "titleSpan": "ogni settore",
+    "items": [
+      "Hotel",
+      "E-Commerce",
+      "Cliniche",
+      "Ristoranti",
+      "Attività Locali"
+    ]
+  },
+  "why": {
+    "label": "PERCHÉ NOI",
+    "title": "Perché",
+    "titleSpan": "BotEngineStudio?",
+    "items": [
+      {
+        "title": "Velocità",
+        "text": "Consegna entro 48 ore. La tua azienda non aspetta."
+      },
+      {
+        "title": "Automazione",
+        "text": "AI che lavora 24/7 senza interruzioni e senza errori."
+      },
+      {
+        "title": "Design Premium",
+        "text": "Design unici che costruiscono fiducia e professionalità."
+      },
+      {
+        "title": "Conversione",
+        "text": "Ogni elemento è ottimizzato per trasformare i visitatori in clienti."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Pronti a",
+    "titleSpan": "trasformare",
+    "titleEnd": "la tua azienda?",
+    "text": "Inizia oggi con una consulenza gratuita. Ottieni il tuo chatbot AI e il sito web moderno entro 48 ore.",
+    "btnDemo": "Richiedi Demo",
+    "btnContact": "Contattaci"
+  },
+  "about": {
+    "label": "CHI SIAMO",
+    "title": "Costruiamo",
+    "titleSpan": "esperienze digitali",
+    "titleEnd": "che portano clienti",
+    "subtitle": "BotEngineStudio non è solo un'agenzia. Creiamo sistemi che automatizzano, ottimizzano e fanno crescere la tua azienda ogni giorno.",
+    "missionTitle": "La nostra missione",
+    "missionText": "Aiutare le aziende a crescere più velocemente utilizzando AI, automazione e design moderno che converte.",
+    "visionTitle": "La nostra visione",
+    "visionText": "Diventare il nuovo standard per la presenza online delle aziende moderne in Albania e oltre.",
+    "storyTitle": "Perché esiste",
+    "storyTitleSpan": "BotEngineStudio?",
+    "storyText1": "Molte aziende perdono clienti ogni giorno per un motivo semplice: rispondono tardi, non hanno una presenza professionale online e non usano l'automazione.",
+    "storyText2": "Abbiamo creato BotEngineStudio per risolvere questo problema. Combiniamo la tecnologia AI con il design moderno per creare sistemi che lavorano per voi 24/7.",
+    "valuesTitle": "Cosa ci",
+    "valuesTitleSpan": "distingue?",
+    "values": [
+      { "title": "Velocità", "text": "Implementazione entro 48 ore." },
+      {
+        "title": "Automazione",
+        "text": "Sistemi che lavorano senza intervento."
+      },
+      {
+        "title": "Design Premium",
+        "text": "Siti web che creano fiducia e conversioni."
+      }
+    ],
+    "ctaTitle": "Pronti a lavorare",
+    "ctaTitleSpan": "insieme?",
+    "ctaBtn": "Iniziamo"
+  },
+  "contact": {
+    "label": "CONTATTO",
+    "title": "Parliamo del",
+    "titleSpan": "tuo progetto",
+    "subtitle": "Scrivici per un sito web, chatbot AI o una soluzione completa per la tua azienda. Ti risponderemo il prima possibile.",
+    "formTitle": "Inviaci un messaggio",
+    "formSubtitle": "Compila il modulo e ti contatteremo per capire meglio le esigenze della tua azienda.",
+    "firstName": "Nome",
+    "firstNamePlaceholder": "Inserisci il tuo nome",
+    "lastName": "Cognome",
+    "lastNamePlaceholder": "Inserisci il tuo cognome",
+    "email": "Email",
+    "emailPlaceholder": "email@esempio.com",
+    "phone": "Telefono",
+    "phonePlaceholder": "+355...",
+    "service": "Servizio di tuo interesse",
+    "servicePlaceholder": "Scegli un'opzione",
+    "serviceOptions": [
+      "AI Chatbot",
+      "Sviluppo Sito Web",
+      "Website + Chatbot Combo",
+      "Altro"
+    ],
+    "message": "Messaggio",
+    "messagePlaceholder": "Dicci qualcosa in più sul tuo progetto o azienda...",
+    "submitBtn": "Invia Messaggio",
+    "emailLabel": "Email",
+    "phoneLabel": "Telefono",
+    "locationLabel": "Posizione",
+    "location": "Tirana, Albania",
+    "followTitle": "Seguici",
+    "followText": "Rimani in contatto con noi e scopri i nostri ultimi progetti e novità."
+  },
+  "chatbot": {
+    "label": "CHATBOT SERVICE",
+    "title": "Chatbot AI che",
+    "titleSpan": "risponde, aiuta e converte",
+    "subtitle": "Un chatbot personalizzato per la tua azienda che lavora 24/7, risponde in secondi e trasforma i visitatori in clienti senza perdere tempo.",
+    "btnDemo": "Richiedi Demo",
+    "btnOffer": "Richiedi Offerta",
+    "whatTitle": "Cos'è il nostro chatbot?",
+    "whatText": "Il nostro chatbot è un assistente virtuale addestrato per la tua azienda. Risponde automaticamente alle domande, aiuta il cliente a trovare le informazioni giuste e lo guida verso l'azione desiderata: ordine, prenotazione, contatto o lead.",
+    "previewStatus": "BotEngine AI · Online",
+    "previewMsg1": "Ciao 👋 Come posso aiutarti?",
+    "previewMsg2": "Voglio sapere i prezzi",
+    "previewMsg3": "Certo. I pacchetti partono da una configurazione iniziale e possono essere personalizzati per la tua azienda.",
+    "problemsTitle": "Quali problemi",
+    "problemsTitleSpan": "risolve?",
+    "problems": [
+      {
+        "title": "Risposte ritardate",
+        "text": "I clienti se ne vanno quando non ricevono una risposta immediata su DM o sul sito."
+      },
+      {
+        "title": "Perdita di lead",
+        "text": "Senza automazione, molti visitatori se ne vanno senza lasciare un contatto e senza fare il passo successivo."
+      },
+      {
+        "title": "Domande ripetitive",
+        "text": "L'azienda perde tempo rispondendo ogni giorno alle stesse domande."
+      }
+    ],
+    "featuresTitle": "Funzionalità che fanno",
+    "featuresTitleSpan": "la differenza",
+    "features": [
+      "Risposte automatiche 24/7",
+      "Lead capture e raccolta contatti",
+      "FAQ personalizzate per la tua azienda",
+      "Guida il cliente verso l'ordine o la prenotazione",
+      "Follow-up automatico",
+      "Tone of voice in linea con il tuo brand"
+    ],
+    "integrationsTitle": "Integrazioni con",
+    "integrationsTitleSpan": "i canali principali",
+    "processTitle": "Il processo di",
+    "processTitleSpan": "implementazione",
+    "processSteps": [
+      {
+        "title": "Analisi aziendale",
+        "text": "Comprendiamo il prodotto, le domande dei clienti e gli obiettivi del chatbot."
+      },
+      {
+        "title": "Sviluppo & formazione",
+        "text": "Creiamo flussi, risposte e logica basati su scenari aziendali reali."
+      },
+      {
+        "title": "Integrazione",
+        "text": "Colleghiamo il chatbot ai canali dove i tuoi clienti comunicano di più."
+      },
+      {
+        "title": "Lancio & ottimizzazione",
+        "text": "Pubblichiamo il chatbot e lo miglioriamo in base all'utilizzo reale."
+      }
+    ],
+    "ctaTitle": "Pronto per un chatbot che",
+    "ctaTitleSpan": "lavora per te 24/7?",
+    "ctaText": "Ottieni una demo o un'offerta personalizzata in base alla tua azienda, settore e canale dove vuoi implementarlo.",
+    "ctaBtnDemo": "Richiedi Demo",
+    "ctaBtnOffer": "Richiedi Offerta",
+    "pricingTitle": "Pacchetti e prezzi",
+    "pricingTitleSpan": "del chatbot",
+    "pricingBadge": "Il più scelto",
+    "plans": [
+      {
+        "label": "BASIC",
+        "title": "Inizio",
+        "subtitle": "Per aziende che vogliono l'automazione base",
+        "features": [
+          "FAQ Bot (domande comuni)",
+          "Lead Capture Bot (raccoglie contatti)",
+          "Integrazione sito web",
+          "Setup + test"
+        ],
+        "buttonText": "Richiedi Offerta"
+      },
+      {
+        "label": "GROWTH",
+        "title": "Vendite + Automazione",
+        "subtitle": "Per aziende che vogliono risultati reali",
+        "features": [
+          "FAQ Bot",
+          "Lead Capture Bot",
+          "Sales Funnel Bot",
+          "Cart Recovery Bot",
+          "Integrazione sito web + ottimizzazione",
+          "Struttura per conversione"
+        ],
+        "buttonText": "Il più scelto"
+      },
+      {
+        "label": "PRO",
+        "title": "Automazione completa",
+        "subtitle": "Per aziende serie (hotel, e-commerce, servizi)",
+        "features": [
+          "Tutto da Growth",
+          "Booking / Reservation Bot",
+          "Follow-up Bot",
+          "Flussi personalizzati per la tua azienda",
+          "Integrazione multi-canale",
+          "Strategia di conversione"
+        ],
+        "buttonText": "Richiedi Premium"
+      }
+    ]
+  },
+  "websiteService": {
+    "label": "WEBSITE SERVICE",
+    "title": "Sito web moderno che",
+    "titleSpan": "ha un bell'aspetto e converte",
+    "subtitle": "Realizziamo siti web professionali per aziende, hotel, cliniche, landing page ed e-commerce — con design premium, responsive e struttura pensata per i risultati.",
+    "btnOffer": "Richiedi Offerta",
+    "btnContact": "Contatta",
+    "typesTitle": "Che tipo di",
+    "typesTitleSpan": "siti web realizziamo?",
+    "types": [
+      {
+        "title": "Landing Page",
+        "text": "Pagina focalizzata su offerte, lead capture e conversione rapida."
+      },
+      {
+        "title": "Sito Aziendale",
+        "text": "Presenza professionale online per aziende, servizi e brand locali."
+      },
+      {
+        "title": "Sito per Hotel",
+        "text": "Presentazione elegante delle camere, dei servizi e possibilità di prenotazione."
+      },
+      {
+        "title": "Sito per Clinica",
+        "text": "Pagina moderna per fiducia, informazione e contatto rapido con i pazienti."
+      },
+      {
+        "title": "E-Commerce",
+        "text": "Negozio online con struttura chiara per prodotti, offerte e vendite."
+      }
+    ],
+    "featuresTitle": "Cosa",
+    "featuresTitleSpan": "include?",
+    "features": [
+      "Design moderno e premium.",
+      "Responsive su telefono, tablet e desktop.",
+      "SEO base per struttura e contenuto.",
+      "Moduli di contatto personalizzati.",
+      "Pulsante WhatsApp per contatto rapido.",
+      "Dominio & hosting gratuito per 1 anno."
+    ],
+    "benefitsTitle": "Perché è importante un",
+    "benefitsTitleSpan": "sito web ben costruito?",
+    "benefits": [
+      {
+        "title": "Design che crea fiducia",
+        "text": "Realizziamo siti che appaiono professionali e danno alla tua azienda una presenza seria."
+      },
+      {
+        "title": "Responsive su ogni dispositivo",
+        "text": "La tua pagina funziona e ha un bell'aspetto su desktop, tablet e mobile."
+      },
+      {
+        "title": "SEO base integrata",
+        "text": "Struttura ottimizzata che aiuta Google a capire e indicizzare la tua pagina."
+      },
+      {
+        "title": "Moduli & integrazioni",
+        "text": "Possiamo aggiungere contact form, WhatsApp e chatbot per più lead."
+      }
+    ],
+    "processTitle": "Come funziona",
+    "processTitleSpan": "il processo?",
+    "processSteps": [
+      {
+        "title": "Consulenza & strategia",
+        "text": "Discutiamo l'azienda, gli obiettivi e il tipo di pagina di cui hai bisogno."
+      },
+      {
+        "title": "Design & struttura",
+        "text": "Creiamo il layout, la gerarchia dei contenuti e l'esperienza utente."
+      },
+      {
+        "title": "Sviluppo",
+        "text": "Costruiamo la pagina con focus su velocità, chiarezza e conversione."
+      },
+      {
+        "title": "Lancio",
+        "text": "La pagina viene pubblicata ed è pronta per i tuoi clienti reali."
+      }
+    ],
+    "ctaTitle": "Pronto per un sito web che",
+    "ctaTitleSpan": "porta la tua azienda al livello successivo?",
+    "ctaText": "Dicci che tipo di pagina hai bisogno e ti forniremo una soluzione chiara, moderna e personalizzata per la tua azienda.",
+    "ctaBtnOffer": "Richiedi Offerta",
+    "ctaBtnContact": "Scrivi Ora",
+    "pricingTitle": "Pacchetti e",
+    "pricingTitleSpan": "prezzi iniziali",
+    "pricingBadge": "Il più scelto",
+    "plans": [
+      {
+        "label": "STARTER",
+        "title": "Landing Page",
+        "suffix": "da",
+        "description": "Per offerte, lead generation e presentazione focalizzata di un servizio o prodotto.",
+        "features": [
+          "1 pagina (Landing Page)",
+          "Design moderno & pulito",
+          "Responsive (mobile/tablet)",
+          "CTA per conversione (pulsanti, sezioni)",
+          "Modulo di contatto",
+          "Integrazione WhatsApp",
+          "SEO base (titoli, struttura)",
+          "Caricamento veloce"
+        ],
+        "buttonText": "Richiedi Offerta"
+      },
+      {
+        "label": "BUSINESS",
+        "title": "Business Website",
+        "suffix": "da",
+        "description": "Per aziende che vogliono una presenza professionale e convertente online.",
+        "features": [
+          "Fino a 5 pagine (Home, Chi Siamo, Servizi, Contatto...)",
+          "Design premium e professionale",
+          "Responsive su tutti i dispositivi",
+          "Struttura per conversione (UX/UI)",
+          "Modulo di contatto avanzato",
+          "Integrazione WhatsApp + pulsanti CTA",
+          "SEO base (struttura + meta)",
+          "Ottimizzazione performance",
+          "Animazioni moderne (smooth UI)"
+        ],
+        "buttonText": "Il più scelto"
+      },
+      {
+        "label": "PREMIUM",
+        "title": "Premium Website",
+        "suffix": "da",
+        "description": "Per hotel, cliniche e aziende che vogliono una presenza forte e unica.",
+        "features": [
+          "Fino a 10+ pagine",
+          "Design unico (non template)",
+          "UX/UI avanzato per conversione",
+          "Struttura personalizzata per la tua azienda",
+          "Dashboard admin (pannello di gestione)",
+          "Gestione contenuti (testo, foto, sezioni)",
+          "Moduli avanzati (lead capture)",
+          "Salvataggio automatico dei lead",
+          "Dominio + Hosting 1 anno/Gratuito",
+          "SEO base + struttura per Google",
+          "Ottimizzazione performance avanzata",
+          "Animazioni premium & micro-interazioni",
+          "Supporto prioritario"
+        ],
+        "buttonText": "Richiedi Premium"
+      }
+    ]
+  },
+  "combo": {
+    "title": "Website +",
+    "titleSpan": "AI Chatbot",
+    "titleEnd": "in un pacchetto",
+    "subtitle": "Creiamo una presenza digitale che non è solo bella, ma converte automaticamente i visitatori in clienti.",
+    "btnDemo": "Richiedi Demo",
+    "btnPackages": "Vedi Pacchetti",
+    "problemTitle": "Perché le aziende perdono clienti?",
+    "problemItems": [
+      "Sito web senza conversione ❌",
+      "Risposte ritardate ❌",
+      "Lead persi ❌"
+    ],
+    "solutionTitle": "La nostra soluzione 🔥",
+    "solutions": [
+      {
+        "title": "Sito Web Premium",
+        "text": "Design moderno focalizzato sulle vendite"
+      },
+      { "title": "AI Chatbot", "text": "Automatizza la comunicazione 24/7" },
+      {
+        "title": "Crescita Conversioni",
+        "text": "Sistema che trasforma i visitatori in clienti"
+      }
+    ],
+    "featuresTitle": "Cosa include il pacchetto",
+    "websiteTitle": "Sito Web",
+    "websiteFeatures": [
+      "Landing page / multi-page",
+      "Design responsive",
+      "SEO base",
+      "Moduli di contatto"
+    ],
+    "chatbotTitle": "Chatbot",
+    "chatbotFeatures": [
+      "FAQ + Lead capture",
+      "Sales automation",
+      "Risposte 24/7",
+      "Integrazione WhatsApp / Instagram"
+    ],
+    "processTitle": "Come funziona?",
+    "processSteps": [
+      "1. Consulenza",
+      "2. Strategia",
+      "3. Sviluppo",
+      "4. Lancio 🚀"
+    ],
+    "ctaTitle": "Pronto per un sito web che",
+    "ctaTitleSpan": "porta la tua azienda al livello successivo?",
+    "ctaText": "Dicci che tipo di pagina hai bisogno e ti forniremo una soluzione chiara, moderna e personalizzata.",
+    "ctaBtnOffer": "Richiedi Offerta",
+    "ctaBtnContact": "Scrivi Ora"
+  },
+  "projectDetail": {
+    "notFound": "Progetto non trovato.",
+    "backBtn": "← Torna indietro",
+    "backPortfolio": "Torna al Portfolio",
+    "statusDone": "✓ Completato",
+    "statusWip": "⏳ In Corso",
+    "sectionAbout": "SUL PROGETTO",
+    "sectionGallery": "ANTEPRIMA PROGETTO",
+    "sectionFeatures": "FUNZIONALITÀ",
+    "sectionStack": "TECNOLOGIE",
+    "btnLive": "Vedi Live",
+    "btnSimilar": "Richiedi un progetto simile",
+    "btnOther": "← Altri Progetti"
+  }
+}

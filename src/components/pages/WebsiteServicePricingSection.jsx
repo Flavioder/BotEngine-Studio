@@ -2,125 +2,55 @@ import "../styles/WebsiteServicePricingSection.css";
 import { Check, Star } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-const websitePlans = [
-  {
-    id: 1,
-    label: "STARTER",
-    title: "Landing Page",
-    price: "€199",
-    suffix: "nga",
-    description:
-      "Për oferta, lead generation dhe prezantim të fokusuar të një shërbimi ose produkti.",
-    features: [
-      "1 faqe (Landing Page)",
-      "Dizajn modern & i pastër",
-      "Responsive (mobile/tablet)",
-      "CTA për konvertim (butona, seksione)",
-      "Form kontakti",
-      "Integrim WhatsApp",
-      "SEO bazë (tituj, strukturë)",
-      "Ngarkim i shpejtë",
-    ],
-    buttonText: "Kërko Ofertë",
-    featured: false,
-    delay: "0.3s",
-  },
-  {
-    id: 2,
-    label: "BUSINESS",
-    title: "Business Website",
-    price: "€399",
-    suffix: "nga",
-    description:
-      "Për biznese që duan një prezencë profesionale dhe konvertuese online.",
-    features: [
-      "Deri në 5 faqe (Home, About, Services, Contact...)",
-      "Dizajn premium dhe profesional",
-      "Responsive në të gjitha pajisjet",
-      "Strukturë për konvertim (UX/UI)",
-      "Form kontakti i avancuar",
-      "Integrim WhatsApp + CTA buttons",
-      "SEO bazë (strukturë + meta)",
-      "Optimizim performance",
-      "Animacione moderne (smooth UI)",
-    ],
-    buttonText: "Më i zgjedhuri",
-    featured: true,
-    badge: "Më i zgjedhuri",
-    delay: "0.4s",
-  },
-  {
-    id: 3,
-    label: "PREMIUM",
-    title: "Premium Website",
-    price: "€699",
-    suffix: "nga",
-    description:
-      "Për hotele, klinika dhe biznese që duan një prezencë të fortë dhe unike.",
-    features: [
-      "Deri në 10+ faqe",
-      "Dizajn unik (jo template)",
-      "UX/UI i avancuar për konvertim",
-      "Strukturë e personalizuar sipas biznesit",
-
-      "Dashboard admin (panel menaxhimi)",
-      "Menaxhim përmbajtje (tekst, foto, seksione)",
-
-      "Forma të avancuara (lead capture)",
-      "Ruajtje automatike e lead-eve",
-      "Domain + Hosting 1 vit/Free",
-      "SEO bazë + strukturë për Google",
-      "Optimizim performance i avancuar",
-
-      "Animacione premium & micro-interactions",
-      "Suport prioritar",
-    ],
-    buttonText: "Kërko Premium",
-    featured: false,
-    delay: "0.5s",
-  },
-];
+const featured = [false, true, false];
+const delays = ["0.3s", "0.4s", "0.5s"];
+const prices = ["€199", "€399", "€699"];
 
 function WebsiteServicePricingSection() {
+  const { t } = useTranslation();
+  const plans = t("websiteService.plans", { returnObjects: true });
+
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("show");
       });
     });
-
     elements.forEach((el) => observer.observe(el));
   }, []);
+
   return (
     <section className="website-service-pricing">
       <div className="website-service-container">
         <h2 className="website-service-section-title">
-          Paketa dhe <span>çmime fillestare</span>
+          {t("websiteService.pricingTitle")}{" "}
+          <span>{t("websiteService.pricingTitleSpan")}</span>
         </h2>
 
         <div className="website-service-pricing-grid">
-          {websitePlans.map((plan) => (
+          {plans.map((plan, index) => (
             <article
-              key={plan.id}
+              key={index}
               className={`website-service-pricing-card grow ${
-                plan.featured ? "website-service-pricing-card-featured" : ""
-              } `}
+                featured[index] ? "website-service-pricing-card-featured" : ""
+              }`}
+              style={{ transitionDelay: delays[index] }}
             >
-              {plan.featured && (
+              {featured[index] && (
                 <div className="website-service-pricing-badge">
                   <Star size={12} fill="currentColor" />
-                  <span>{plan.badge}</span>
+                  <span>{t("websiteService.pricingBadge")}</span>
                 </div>
               )}
 
               <span
                 className={`website-service-pricing-label ${
-                  plan.featured ? "website-service-pricing-label-featured" : ""
+                  featured[index]
+                    ? "website-service-pricing-label-featured"
+                    : ""
                 }`}
               >
                 {plan.label}
@@ -130,7 +60,7 @@ function WebsiteServicePricingSection() {
 
               <div className="website-service-pricing-price-row">
                 <span className="website-service-pricing-price">
-                  {plan.price}
+                  {prices[index]}
                 </span>
                 <span className="website-service-pricing-suffix">
                   {plan.suffix}
@@ -142,8 +72,8 @@ function WebsiteServicePricingSection() {
               </p>
 
               <ul className="website-service-pricing-features">
-                {plan.features.map((feature, index) => (
-                  <li key={index} className="website-service-pricing-feature">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="website-service-pricing-feature">
                     <span className="website-service-pricing-check">
                       <Check size={14} strokeWidth={2.6} />
                     </span>
@@ -155,7 +85,7 @@ function WebsiteServicePricingSection() {
               <Link
                 to="/contact"
                 className={`website-service-pricing-btn ${
-                  plan.featured
+                  featured[index]
                     ? "website-service-pricing-btn-featured"
                     : "website-service-pricing-btn-outline"
                 }`}

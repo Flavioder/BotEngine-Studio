@@ -1,36 +1,51 @@
 import "../styles/ContactPage.css";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { useEffect } from "react";
+import { FaInstagram } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function ContactPage() {
-  useEffect(() => {
-    const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
+  const { t } = useTranslation();
+  const serviceOptions = t("contact.serviceOptions", { returnObjects: true });
+  const [status, setStatus] = useState("");
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    const res = await fetch("https://formspree.io/f/xjgllzzn", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: new FormData(form),
     });
 
+    if (res.ok) {
+      setStatus("success");
+      form.reset();
+    } else {
+      setStatus("error");
+    }
+  };
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-up1,.grow,.fade-in");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    });
     elements.forEach((el) => observer.observe(el));
   }, []);
+
   return (
     <main className="contact-page">
       <section className="contact-hero">
         <div className="contact-container">
-          <span className="contact-label">KONTAKT</span>
-
+          <span className="contact-label">{t("contact.label")}</span>
           <h1 className="contact-title">
-            Le të flasim për <span>projektin tuaj</span>
+            {t("contact.title")} <span>{t("contact.titleSpan")}</span>
           </h1>
-
-          <p className="contact-subtitle">
-            Na shkruani për website, chatbot AI ose një zgjidhje të plotë për
-            biznesin tuaj. Do t’ju kthejmë përgjigje sa më shpejt.
-          </p>
+          <p className="contact-subtitle">{t("contact.subtitle")}</p>
         </div>
       </section>
 
@@ -40,62 +55,100 @@ function ContactPage() {
             {/* LEFT */}
             <div className="contact-form-card fade-in">
               <div className="contact-card-top">
-                <h2>Na dërgo një mesazh</h2>
-                <p>
-                  Plotëso formularin dhe ne do t’ju kontaktojmë për të kuptuar
-                  më mirë nevojat e biznesit tuaj.
-                </p>
+                <h2>{t("contact.formTitle")}</h2>
+                <p>{t("contact.formSubtitle")}</p>
               </div>
 
-              <form className="contact-form">
+              <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="contact-form-row">
                   <div className="contact-field">
-                    <label>Emri</label>
-                    <input type="text" placeholder="Shkruani emrin tuaj" />
+                    <label>{t("contact.firstName")}</label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder={t("contact.firstNamePlaceholder")}
+                      required
+                    />
                   </div>
-
                   <div className="contact-field">
-                    <label>Mbiemri</label>
-                    <input type="text" placeholder="Shkruani mbiemrin tuaj" />
+                    <label>{t("contact.lastName")}</label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder={t("contact.lastNamePlaceholder")}
+                      required
+                    />
                   </div>
                 </div>
 
                 <div className="contact-form-row">
                   <div className="contact-field">
-                    <label>Email</label>
-                    <input type="email" placeholder="email@shembull.com" />
+                    <label>{t("contact.email")}</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder={t("contact.emailPlaceholder")}
+                      required
+                    />
                   </div>
-
                   <div className="contact-field">
-                    <label>Telefoni</label>
-                    <input type="text" placeholder="+355..." />
+                    <label>{t("contact.phone")}</label>
+                    <input
+                      type="text"
+                      name="phone"
+                      placeholder={t("contact.phonePlaceholder")}
+                    />
                   </div>
                 </div>
 
                 <div className="contact-field">
-                  <label>Shërbimi që ju intereson</label>
-                  <select defaultValue="">
+                  <label>{t("contact.service")}</label>
+                  <select name="service" defaultValue="">
                     <option value="" disabled>
-                      Zgjidhni një opsion
+                      {t("contact.servicePlaceholder")}
                     </option>
-                    <option>AI Chatbot</option>
-                    <option>Website Development</option>
-                    <option>Website + Chatbot Combo</option>
-                    <option>Tjetër</option>
+                    {serviceOptions.map((option, index) => (
+                      <option key={index}>{option}</option>
+                    ))}
                   </select>
                 </div>
 
                 <div className="contact-field">
-                  <label>Mesazhi</label>
+                  <label>{t("contact.message")}</label>
                   <textarea
+                    name="message"
                     rows="6"
-                    placeholder="Na tregoni pak më shumë për projektin ose biznesin tuaj..."
+                    placeholder={t("contact.messagePlaceholder")}
+                    required
                   ></textarea>
                 </div>
 
+                {status === "success" && (
+                  <p
+                    style={{
+                      color: "#18d4ff",
+                      marginBottom: "12px",
+                      fontWeight: "600",
+                    }}
+                  >
+                    ✓ Mesazhi u dërgua me sukses!
+                  </p>
+                )}
+                {status === "error" && (
+                  <p
+                    style={{
+                      color: "#ff4d4d",
+                      marginBottom: "12px",
+                      fontWeight: "600",
+                    }}
+                  >
+                    ✗ Diçka shkoi keq. Provo përsëri.
+                  </p>
+                )}
+
                 <button type="submit" className="contact-submit-btn">
                   <Send size={18} strokeWidth={2.3} />
-                  <span>Dërgo Mesazhin</span>
+                  <span>{t("contact.submitBtn")}</span>
                 </button>
               </form>
             </div>
@@ -107,7 +160,7 @@ function ContactPage() {
                   <Mail size={20} />
                 </div>
                 <div>
-                  <h3>Email</h3>
+                  <h3>{t("contact.emailLabel")}</h3>
                   <p>botenginestudio@gmail.com</p>
                 </div>
               </div>
@@ -117,7 +170,7 @@ function ContactPage() {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <h3>Telefon</h3>
+                  <h3>{t("contact.phoneLabel")}</h3>
                   <p>+355 69 447 1238</p>
                 </div>
               </div>
@@ -127,18 +180,14 @@ function ContactPage() {
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <h3>Vendndodhja</h3>
-                  <p>Tiranë, Shqipëri</p>
+                  <h3>{t("contact.locationLabel")}</h3>
+                  <p>{t("contact.location")}</p>
                 </div>
               </div>
 
               <div className="contact-social-card fade-up1">
-                <h3>Na ndiqni</h3>
-                <p>
-                  Qëndroni të lidhur me ne dhe shikoni projektet dhe risitë
-                  tona.
-                </p>
-
+                <h3>{t("contact.followTitle")}</h3>
+                <p>{t("contact.followText")}</p>
                 <div className="contact-social">
                   <a
                     href="https://www.instagram.com/botenginestudio?igsh=MTZuYXU4aHZ1aWlnZw=="

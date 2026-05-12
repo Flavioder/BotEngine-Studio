@@ -2,83 +2,56 @@ import "../styles/ServicesSection.css";
 import { Bot, LayoutDashboard, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-const services = [
-  {
-    id: 1,
-    icon: <Bot size={28} strokeWidth={2.2} />,
-    title: "AI Chatbot Automation",
-    text: "Chatbot inteligjent 24/7 që kualifikon lead-e, përgjigjet pyetjeve dhe rrit shitjet automatikisht.",
-    features: [
-      "Përgjigje në sekonda",
-      "Integrim me WhatsApp/Instagram",
-      "Analitikë të detajuara",
-    ],
-    type: "cyan",
-    link: "/chatbot-service", // 🔥
-    delay: "0.1s",
-  },
-  {
-    id: 2,
-    icon: <LayoutDashboard size={28} strokeWidth={2.2} />,
-    title: "Website Development",
-    text: "Website modern, i shpejtë dhe i optimizuar për konvertim që përfaqëson biznesin tuaj profesionalisht.",
-    features: ["Responsive design", "SEO optimizim", "Shpejtësi e lartë"],
-    type: "purple",
-    link: "/website-service", // 🔥 (do e krijosh më vonë)
-    delay: "0.2s",
-  },
-  {
-    id: 3,
-    icon: <Sparkles size={28} strokeWidth={2.2} />,
-    title: "Website + Chatbot Combo",
-    text: "Paketa e plotë: website premium + chatbot AI për një prezencë dixhitale komplet dhe konvertim maksimal.",
-    features: [
-      "Gjithçka në një paketë",
-      "Çmim i reduktuar",
-      "Suport prioritar",
-    ],
-    type: "blue",
-    popular: true,
-    link: "/combo-service", // ose page tjetër
-    delay: "0.3s",
-  },
+const icons = [
+  <Bot size={28} strokeWidth={2.2} />,
+  <LayoutDashboard size={28} strokeWidth={2.2} />,
+  <Sparkles size={28} strokeWidth={2.2} />,
 ];
+
+const types = ["cyan", "purple", "blue"];
+const links = ["/chatbot-service", "/website-service", "/combo-service"];
+const delays = ["0.1s", "0.2s", "0.3s"];
+const popular = [false, false, true];
+
 function ServicesSection() {
+  const { t } = useTranslation();
+  const items = t("services.items", { returnObjects: true });
+
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-up1");
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("show");
       });
     });
-
     elements.forEach((el) => observer.observe(el));
   }, []);
+
   return (
     <section className="services-section" id="services">
       <div className="services-container">
         <div className="services-heading">
-          <span className="services-label">SHËRBIMET</span>
+          <span className="services-label">{t("services.label")}</span>
           <h2>
-            Zgjidhje të <span>plota dixhitale</span>
+            {t("services.title")} <span>{t("services.titleSpan")}</span>
           </h2>
         </div>
 
-        <div className="services-grid ">
-          {services.map((item) => (
+        <div className="services-grid">
+          {items.map((item, index) => (
             <div
               className="service-card fade-up1"
-              key={item.id}
-              style={{ transitionDelay: `${item.delay}` }}
+              key={index}
+              style={{ transitionDelay: delays[index] }}
             >
-              {item.popular && <div className="badge">Popular</div>}
+              {popular[index] && (
+                <div className="badge">{t("services.badge")}</div>
+              )}
 
-              <div className={`icon-box ${item.type}`}>
-                <span>{item.icon}</span>
+              <div className={`icon-box ${types[index]}`}>
+                <span>{icons[index]}</span>
               </div>
 
               <h3>{item.title}</h3>
@@ -86,16 +59,15 @@ function ServicesSection() {
 
               <ul>
                 {item.features.map((f, i) => (
-                  <li key={i} className={`feature ${item.type}`}>
+                  <li key={i} className={`feature ${types[index]}`}>
                     <span className="check">✓</span>
                     <span>{f}</span>
                   </li>
                 ))}
               </ul>
 
-              {/* 🔥 BUTTON */}
-              <Link to={item.link} className={`service-btn ${item.type}`}>
-                Shiko më shumë →
+              <Link to={links[index]} className={`service-btn ${types[index]}`}>
+                {t("services.btnMore")}
               </Link>
             </div>
           ))}

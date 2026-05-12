@@ -1,102 +1,55 @@
 import "../styles/PricingSection.css";
 import { Check, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-const plans = [
-  {
-    id: 1,
-    label: "STARTER",
-    title: "Chatbot Starter",
-    price: "€149",
-    suffix: "/muaj",
-    features: [
-      "Chatbot AI i personalizuar",
-      "Integrim në website",
-      "Raporte mujore",
-      "Suport email",
-    ],
-    buttonText: "Fillo Tani",
-    featured: false,
-    delay:"0.5s",
-  },
-  {
-    id: 2,
-    label: "PROFESSIONAL",
-    title: "Website Professional",
-    price: "€499",
-    suffix: "/njëherë",
-    features: [
-      "Website modern responsive",
-      "Deri 7 faqe",
-      "SEO bazë",
-      "Hosting 1 vit",
-      "SSL certifikatë",
-    ],
-    buttonText: "Fillo Tani",
-    featured: false,
-    delay:"0.3s",
-  },
-  {
-    id: 3,
-    label: "PREMIUM",
-    title: "Premium Combo",
-    price: "€799",
-    suffix: "/njëherë + €99/muaj",
-    features: [
-      "Website premium (deri 12 faqe)",
-      "Chatbot AI i avancuar",
-      "WhatsApp + Instagram integrim",
-      "Analitikë të avancuara",
-      "Suport prioritar 24/7",
-      "Hosting + domain falas",
-    ],
-    buttonText: "Merr Premium",
-    featured: true,
-    badge: "Rekomanduar",
-    delay:"0s",
-  },
-];
+const delays = ["0.5s", "0.3s", "0s"];
+const featured = [false, false, true];
 
 function PricingSection() {
-   useEffect(() => {
-            const elements = document.querySelectorAll(".fade-up1");
-        
-            const observer = new IntersectionObserver((entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("show");
-                }
-              });
-            });
-        
-            elements.forEach((el) => observer.observe(el));
-          }, []);
+  const { t } = useTranslation();
+  const plans = t("pricing.plans", { returnObjects: true });
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-up1");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    });
+    elements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
     <section className="pricing-section" id="pricing">
       <div className="pricing-container">
         <div className="pricing-heading">
-          <span className="pricing-label">ÇMIMET</span>
+          <span className="pricing-label">{t("pricing.label")}</span>
           <h2 className="pricing-title">
-            Zgjidhni <span>paketën tuaj</span>
+            {t("pricing.title")} <span>{t("pricing.titleSpan")}</span>
           </h2>
         </div>
 
         <div className="pricing-grid">
-          {plans.map((plan) => (
+          {plans.map((plan, index) => (
             <article
-              key={plan.id}
+              key={index}
               className={`pricing-card ${
-                plan.featured ? "pricing-card-featured" : ""} fade-up1`} style={{transitionDelay:`${plan.delay}`}}>
-              {plan.featured && (
+                featured[index] ? "pricing-card-featured" : ""
+              } fade-up1`}
+              style={{ transitionDelay: delays[index] }}
+            >
+              {featured[index] && (
                 <div className="pricing-badge">
                   <Star size={12} fill="currentColor" />
-                  <span>{plan.badge}</span>
+                  <span>{t("pricing.badge")}</span>
                 </div>
               )}
 
               <span
                 className={`pricing-plan-label ${
-                  plan.featured ? "pricing-plan-label-featured" : ""
+                  featured[index] ? "pricing-plan-label-featured" : ""
                 }`}
               >
                 {plan.label}
@@ -105,13 +58,15 @@ function PricingSection() {
               <h3 className="pricing-plan-title">{plan.title}</h3>
 
               <div className="pricing-price-row">
-                <span className="pricing-price">{plan.price}</span>
+                <span className="pricing-price">
+                  {index === 0 ? "€299" : index === 1 ? "€499" : "€799"}
+                </span>
                 <span className="pricing-suffix">{plan.suffix}</span>
               </div>
 
               <ul className="pricing-features">
-                {plan.features.map((feature, index) => (
-                  <li key={index} className="pricing-feature-item">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="pricing-feature-item">
                     <span className="pricing-check">
                       <Check size={14} strokeWidth={2.6} />
                     </span>
@@ -120,13 +75,16 @@ function PricingSection() {
                 ))}
               </ul>
 
-              <button
+              <Link
+                to="/contact"
                 className={`pricing-btn ${
-                  plan.featured ? "pricing-btn-featured" : "pricing-btn-outline"
+                  featured[index]
+                    ? "pricing-btn-featured"
+                    : "pricing-btn-outline"
                 }`}
               >
                 {plan.buttonText}
-              </button>
+              </Link>
             </article>
           ))}
         </div>

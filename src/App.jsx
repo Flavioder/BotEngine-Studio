@@ -12,12 +12,14 @@ import ChatbotServicePage from "./components/pages/ChatbotServicePage";
 import WebsiteServicePage from "./components/pages/WebsiteServicePage";
 import ComboServicePage from "./components/pages/ComboServicePage";
 import ProjectDetailPage from "./components/pages/ProjectDetailPage";
+import FloatingLangSwitcher from "./components/FloatingLangSwitcher";
 function App() {
   return (
     <>
       <Navbar />
       <ScrollToTop />
       <ScrollToHash />
+      <FloatingLangSwitcher />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />

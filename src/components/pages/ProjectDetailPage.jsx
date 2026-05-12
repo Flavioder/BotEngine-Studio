@@ -1,13 +1,14 @@
-// src/components/pages/ProjectDetailPage.jsx
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { portfolioItems } from "../../data/portofolioData";
 import "../styles/ProjectDetailPage.css";
+import { useTranslation } from "react-i18next";
 
 function ProjectDetailPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const project = portfolioItems.find((p) => p.slug === slug);
 
   useEffect(() => {
@@ -17,8 +18,10 @@ function ProjectDetailPage() {
   if (!project) {
     return (
       <div className="pdp-notfound">
-        <p>Projekti nuk u gjet.</p>
-        <button onClick={() => navigate("/#portfolio")}>← Kthehu</button>
+        <p>{t("projectDetail.notFound")}</p>
+        <button onClick={() => navigate("/#portfolio")}>
+          {t("projectDetail.backBtn")}
+        </button>
       </div>
     );
   }
@@ -37,14 +40,18 @@ function ProjectDetailPage() {
             onClick={() => navigate("/#portfolio")}
           >
             <ArrowLeft size={16} />
-            Kthehu te Portfolio
+            {t("projectDetail.backPortfolio")}
           </button>
+
           <div
             className="pdp-status-badge"
             data-status={project.status === "Kompletuar" ? "done" : "wip"}
           >
-            {project.status === "Kompletuar" ? "✓ Kompletuar" : "⏳ Në Progres"}
+            {project.status === "Kompletuar"
+              ? t("projectDetail.statusDone")
+              : t("projectDetail.statusWip")}
           </div>
+
           <div className="pdp-hero-icon">{project.icon}</div>
           <h1 className="pdp-hero-title">{project.title}</h1>
           <p className="pdp-hero-subtitle">{project.subtitle}</p>
@@ -72,14 +79,18 @@ function ProjectDetailPage() {
 
         {/* Përshkrimi */}
         <div className="pdp-section">
-          <span className="pdp-section-label">RRETH PROJEKTIT</span>
+          <span className="pdp-section-label">
+            {t("projectDetail.sectionAbout")}
+          </span>
           <p className="pdp-desc">{project.fullDesc}</p>
         </div>
 
-        {/* Galeria e imazheve reale */}
+        {/* Galeria */}
         {project.gallery && project.gallery.length > 0 && (
           <div className="pdp-section">
-            <span className="pdp-section-label">PAMJA E PROJEKTIT</span>
+            <span className="pdp-section-label">
+              {t("projectDetail.sectionGallery")}
+            </span>
             <div className="pdp-gallery">
               {project.gallery.map((img, i) => (
                 <div key={i} className="pdp-gallery-item">
@@ -92,7 +103,9 @@ function ProjectDetailPage() {
 
         {/* Features */}
         <div className="pdp-section">
-          <span className="pdp-section-label">FUNKSIONALITETET</span>
+          <span className="pdp-section-label">
+            {t("projectDetail.sectionFeatures")}
+          </span>
           <div className="pdp-features-grid">
             {project.features.map((f, i) => (
               <div key={i} className="pdp-feature-card">
@@ -108,7 +121,9 @@ function ProjectDetailPage() {
 
         {/* Stack */}
         <div className="pdp-section">
-          <span className="pdp-section-label">TEKNOLOGJITË</span>
+          <span className="pdp-section-label">
+            {t("projectDetail.sectionStack")}
+          </span>
           <div className="pdp-stack">
             {project.stack.map((s) => (
               <span key={s} className="pdp-stack-pill">
@@ -128,7 +143,7 @@ function ProjectDetailPage() {
               className="pdp-btn-primary"
             >
               <ExternalLink size={16} />
-              Shiko Live
+              {t("projectDetail.btnLive")}
             </a>
           )}
           <button
@@ -140,13 +155,13 @@ function ProjectDetailPage() {
             }}
             onClick={() => navigate("/contact")}
           >
-            Kërko një projekt të ngjashëm
+            {t("projectDetail.btnSimilar")}
           </button>
           <button
             className="pdp-btn-secondary"
             onClick={() => navigate("/#portfolio")}
           >
-            ← Projekte të tjera
+            {t("projectDetail.btnOther")}
           </button>
         </div>
       </div>

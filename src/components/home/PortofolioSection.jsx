@@ -2,17 +2,18 @@
 import "../styles/PortofolioSection.css";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { portfolioItems } from "../../data/portofolioData";
+
 function PortofolioSection() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-up1");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("show");
       });
     });
     elements.forEach((el) => observer.observe(el));
@@ -22,9 +23,9 @@ function PortofolioSection() {
     <section className="portfolio-section" id="portfolio">
       <div className="portfolio-container">
         <div className="portfolio-heading">
-          <span className="portfolio-label">PORTFOLIO</span>
+          <span className="portfolio-label">{t("portfolio.label")}</span>
           <h2 className="portfolio-title">
-            Projektet <span>tona</span>
+            {t("portfolio.title")} <span>{t("portfolio.titleSpan")}</span>
           </h2>
         </div>
 
@@ -50,7 +51,9 @@ function PortofolioSection() {
                 </div>
 
                 <div className="portfolio-hover-content">
-                  <button className="portfolio-btn">Shiko Projektin</button>
+                  <button className="portfolio-btn">
+                    {t("portfolio.btnView")}
+                  </button>
                 </div>
               </div>
             </article>
