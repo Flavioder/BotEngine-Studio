@@ -1,8 +1,10 @@
 import "../styles/Footer.css";
-import { Mail, Phone, Bot } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+
+import logo from "/logos/faviconlogo.png";
 
 function Footer() {
   const { t } = useTranslation();
@@ -14,9 +16,11 @@ function Footer() {
           {/* BRAND */}
           <div className="footer-brand">
             <div className="footer-brand-top">
-              <div className="footer-logo-icon">
-                <Bot size={18} strokeWidth={2.2} />
-              </div>
+              <img
+                src={logo}
+                alt="BotEngineStudio"
+                className="footer-logo-image"
+              />
 
               <h3 className="footer-logo-text">
                 Bot<span>Engine</span>Studio

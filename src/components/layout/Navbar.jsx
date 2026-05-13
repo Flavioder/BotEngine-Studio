@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+import logo from "/logos/faviconlogo.png";
+
 import "../styles/Navbar.css";
 
 function Navbar() {
@@ -17,7 +19,11 @@ function Navbar() {
     <header className="navbar">
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
-          BotEngine<span>Studio</span>
+          <img src={logo} alt="BotEngineStudio" className="logo-image" />
+
+          <span className="logo-text">
+            BotEngine<span>Studio</span>
+          </span>
         </Link>
 
         <nav className="navbar-menu desktop-menu">
@@ -29,15 +35,19 @@ function Navbar() {
           >
             {t("navbar.home")}
           </Link>
+
           <Link to="/#services" className="navbar-link">
             {t("navbar.services")}
           </Link>
+
           <Link to="/#pricing" className="navbar-link">
             {t("navbar.packages")}
           </Link>
+
           <Link to="/#portfolio" className="navbar-link">
             {t("navbar.portfolio")}
           </Link>
+
           <Link
             to="/about"
             className={`navbar-link ${isActive("/about") ? "active" : ""}`}
@@ -67,12 +77,15 @@ function Navbar() {
           <Link to="/#home" className="mobile-nav-link" onClick={closeMenu}>
             {t("navbar.home")}
           </Link>
+
           <Link to="/#services" className="mobile-nav-link" onClick={closeMenu}>
             {t("navbar.services")}
           </Link>
+
           <Link to="/#pricing" className="mobile-nav-link" onClick={closeMenu}>
             {t("navbar.packages")}
           </Link>
+
           <Link
             to="/#portfolio"
             className="mobile-nav-link"
@@ -80,9 +93,11 @@ function Navbar() {
           >
             {t("navbar.portfolio")}
           </Link>
+
           <Link to="/about" className="mobile-nav-link" onClick={closeMenu}>
             {t("navbar.about")}
           </Link>
+
           <Link to="/contact" className="mobile-nav-btn" onClick={closeMenu}>
             {t("navbar.getStarted")}
           </Link>
