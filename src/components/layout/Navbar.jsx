@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import logo from "/logos/faviconlogo.png";
+import logo from "/logos/bnewlogo.png";
 
 import "../styles/Navbar.css";
 
