@@ -19,6 +19,7 @@ function App() {
       <Navbar />
       <ScrollToTop />
       <ScrollToHash />
+
       <FloatingLangSwitcher />
       <Routes>
         <Route path="/" element={<Home />} />
